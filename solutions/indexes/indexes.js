@@ -1,6 +1,7 @@
-  const word = "banana";
+ /* const word = "banana";
     const result = letterCount(word);
     console.log(result);
+*/
 
 
 function letterCount (word) {
