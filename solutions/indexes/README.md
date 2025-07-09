@@ -8,5 +8,5 @@ Write a function that takes a string of lowercase characters and returns an obje
 
 1. Maintain the approach in the previous solution of a frequency counter but implement the addition of a string input. Incorporate the split function to
 divide the intital input into a new object with various keys represented by individual letters then use the frequency algorithm to count each one.
-2. Time Complexity:
-3. Space Complexity:
+2. Time Complexity: O(n)
+3. Space Complexity: O(n)

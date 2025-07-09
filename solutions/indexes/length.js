@@ -1,14 +1,14 @@
-/*  const word = "banana";
+  const word = "banana";
     const result = letterCount(word);
     console.log(result);
-*/
+
 
 function letterCount (word) {
-    const letters = [word.split()];
-    count = {};
+    const letters = word.split("");
+    const count = {};
 
     for (const letter of letters) {
-        if (letters[letter]) {
+        if (count[letter]) {
             count[letter] += 1;
         }
         else {
