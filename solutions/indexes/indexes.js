@@ -4,7 +4,7 @@
 */
 
 
-function letterCount (word) {
+function letterIndex (word) {
     const letters = word.split("");
     const count = {};
 
