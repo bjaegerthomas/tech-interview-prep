@@ -16,11 +16,12 @@ function validAnagram (word1, word2) {
             if (split1[letter1] == split2[letter2]) {
                 split1.splice(index1, 1);
                 split2.splice(index2, 1);
-                break;
             }
+            console.log(split1);
+            console.log(split2);
         }
     }
-    if (split1 == [] & split2 == []) {
+    if (split1.length == 0 && split2.length == 0) {
         console.log("These two strings are valid anagrams of each other")
     }
     else {
