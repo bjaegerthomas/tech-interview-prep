@@ -10,8 +10,16 @@ function majorityElement(nums) {
                 count[num] = 1;
             }
         }
-    const majority = count.max();
-    return majority;
+    let maxVal = 0;
+    let maxKey = 0;
+
+    for (const key in count) {
+        if (count[key] > maxVal) {
+            maxVal = count[key];
+            maxKey = key;
+        }
+    }
+    return maxKey;
 };
     
 
