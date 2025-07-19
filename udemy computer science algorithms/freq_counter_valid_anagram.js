@@ -3,7 +3,7 @@ function validAnagram (word1, word2) {
     let split1 = word1.split("");
     let split2 = word2.split("");
     
-    if (word1.length.trim() != word2.length.trim()) {
+    if (word1.trim().length != word2.trim().length) {
         console.log("These two strings are not valid anagrams of each other.")
     }
     
@@ -20,10 +20,12 @@ function validAnagram (word1, word2) {
             }
         }
     }
-    if (split1 & split2 == []) {
+    if (split1 == [] & split2 == []) {
         console.log("These two strings are valid anagrams of each other")
     }
     else {
         console.log("These two strings are not valid anagrams of each other.") 
     }
   };
+
+  validAnagram ("banana", "anaban");
