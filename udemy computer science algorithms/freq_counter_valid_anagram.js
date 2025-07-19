@@ -1,4 +1,4 @@
-function validAnagram(word1, word2){
+function validAnagram (word1, word2) {
     
     let split1 = word1.split("");
     let split2 = word2.split("");
@@ -16,7 +16,14 @@ function validAnagram(word1, word2){
             if (split1[letter1] == split2[letter2]) {
                 split1.splice(index1, 1);
                 split2.splice(index2, 1);
+                break;
             }
         }
     }
-  }
+    if (split1 & split2 == []) {
+        console.log("These two strings are valid anagrams of each other")
+    }
+    else {
+        console.log("These two strings are not valid anagrams of each other.") 
+    }
+  };
