@@ -12,4 +12,4 @@ function areThereDuplicates(arr) {
     return false;
   }
   
-  areThereDuplicates(7, 8, 9, 10, 8, 9, 11);
+  console.log(areThereDuplicates(7, 8, 9, 10, 8, 9, 11));
