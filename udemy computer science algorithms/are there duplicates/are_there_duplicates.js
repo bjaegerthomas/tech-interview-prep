@@ -1,14 +1,15 @@
-function areThereDuplicates(arr) {
+function areThereDuplicates(...arr) {
     let i = 0;
-    
-    for (var j = 1; j < arr.length; j ++) {
-        if (arr[i] == arr[j]) {
+    const sorted = arr.sort();
+
+    for (var j = 1; j < sorted.length; j ++) {
+        if (sorted[i] == sorted[j]) {
             return true;
         }
         else {
-            arr[i] = arr[j];
+            sorted[i] = sorted[j];
         }
-        if (j = arr.length - 1) {
+        if (j === arr.length - 1) {
             return false;
         }
     }
