@@ -8,8 +8,11 @@ function areThereDuplicates(arr) {
         else {
             arr[i] = arr[j];
         }
+        if (j = arr.length - 1) {
+            return false;
+        }
     }
-    return false;
-  }
+}
   
-  console.log(areThereDuplicates(7, 8, 9, 10, 8, 9, 11));
+console.log(areThereDuplicates(7, 8, 9, 10, 8, 9, 11));
+  
