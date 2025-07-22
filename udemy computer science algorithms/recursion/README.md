@@ -14,3 +14,23 @@ The condition when the recursion ends.
 
 # Factorial
 Example -  4! (exclamation denotes factorial) This equals 4 * 3 * 2 * 1
+
+Without recursion (iterative):
+
+function factorial(num) {
+    let total = 1;
+    for (let i = 1; i > 1; i--){
+        let total *= i;
+    }
+    return total;
+}
+
+With recursion:
+
+function factorial(num) {
+    if (num === 1) return 1;
+    return factorial(num-1);
+}
+
+# Common Pitfalls
+Base case is missing or incorrect. There is a failure to change the input or the logic is off for changing the input.
