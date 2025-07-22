@@ -33,4 +33,31 @@ function factorial(num) {
 }
 
 # Common Pitfalls
-Base case is missing or incorrect. There is a failure to change the input or the logic is off for changing the input.
+Base case is missing or incorrect.
+There is a failure to change the input or the logic is off for changing the input. 
+Failure to return a value or returning the wrong value.
+Exceeding the maximum call stack size.
+
+# Helper Method
+function collectOddValues(arr){             //Outer function is not recursive where as the inner function is recursive
+    
+    let result = [];
+
+    function helper(helperInput){
+        if(helperInput.length === 0) {
+            return;
+        }
+        
+        if(helperInput[0] % 2 !== 0){
+            result.push(helperInput[0])     //We are always checking the first index
+        }
+        
+        helper(helperInput.slice(1))        //Then we are removing the first value from the array so we can make the next value the first index
+    }
+    
+    helper(arr)
+
+    return result;
+}
+
+collectOddValues([1,2,3,4,5,6,7,8,9])
