@@ -80,3 +80,7 @@ function collectOddValues(arr){
 }
 
 collectOddValues([1,2,3,4,5])
+
+Tips for working with pure recursion: use methods like slice, the spread operator, and concat which make copies of arrays so you don't mutate the original array.
+Strings are immutable so use methods like slice or substr (substring) to make copies of strings.
+Objects use Object.assign or spread operator.
