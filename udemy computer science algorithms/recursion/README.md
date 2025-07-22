@@ -11,3 +11,6 @@ when the function ends or keyword return is hit. The function is removed from th
 
 # Base Case
 The condition when the recursion ends.
+
+# Factorial
+Example -  4! (exclamation denotes factorial) This equals 4 * 3 * 2 * 1
