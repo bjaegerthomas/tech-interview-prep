@@ -6,6 +6,8 @@ Write a function called power which accepts a base and an exponent. The function
 ## Possible Logic
 Create a function which accepts two arguments. Inside the function there will be a while loop which uses the exponent (second argument) to determine the breaking point for the loop. It will then multiply the base (first argument) with a recursive call of the function for as many times as the exponent has been established before the loop is broken and the final value is returned.
 
+*UPDATE* I still haven't looked at the solution yet but am wondering if i need to use a helper function so that my base and exponent variables don't keep reseting?
+
 ## Given Solution
 
 ## Thoughts after Solution
