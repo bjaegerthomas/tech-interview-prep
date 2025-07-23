@@ -5,7 +5,10 @@ function power(){
 
     function helper(expo) {
         for (let i = 0; i <= expo; i++) {
+            expo --;
             return base * helper();
         }
     }
 }
+
+console.log(power(2,2));
