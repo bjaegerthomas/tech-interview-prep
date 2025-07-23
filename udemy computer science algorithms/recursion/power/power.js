@@ -1,6 +1,5 @@
 function power(base, expo){
     for (let i = 0; i <= expo; i++) {
-        let result = base * power();
+        return base * power();
     }
-    return result;
 }
