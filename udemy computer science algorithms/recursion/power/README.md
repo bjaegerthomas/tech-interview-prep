@@ -1,0 +1,11 @@
+# Power
+
+## Task Overview
+Write a function called power which accepts a base and an exponent. The function should return the power of the base to the exponent. This function should mimic the functionality of Math.pow()  - do not worry about negative bases and exponents.
+
+## Possible Logic
+Create a function which accepts two arguments. Inside the function there will be a while loop which uses the exponent (second argument) to determine the breaking point for the loop. It will then multiply the base (first argument) with a recursive call of the function for as many times as the exponent has been established before the loop is broken and the final value is returned.
+
+## Given Solution
+
+## Thoughts after Solution
