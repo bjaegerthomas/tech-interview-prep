@@ -17,4 +17,4 @@ function productOfArray(arr) {
 }
 
 ## Thoughts after Solution
-I was originally thinking of conditional statment in the solution as being my edge case for when someone originally enters an empty array but it is my base case. I don't need the for loop because the recursive call here just slices away the next value each call until there is nothing left.
+I was originally thinking of conditional statment in the solution as being my edge case for when someone originally enters an empty array but it is my base case. I don't need the for loop because the recursive call here just slices away the next value each call until there is nothing left. Again, not a fan of real world application as the original array data is canabalized and changed but as a problem presented it makes sense.
