@@ -20,3 +20,5 @@ function fib(n){
 
 ## Thoughts after Solution
 Wait a second, did I just solve this in a drier way than the lecturer? I need to try more test cases but my code worked for a num value of 5 which returned 55 as the nth value.
+
+*UPDATE* Alas it is too good to be true. My code did not work for the value 10. It would seem I am missing values within the sequence skipping over them by using just num as the starting value to add to in the recursive line of code.
