@@ -10,8 +10,13 @@ I need to create a function which accepts a whole number. Then I would create an
 
 *UPDATE* While working through logic it seems to me that I can work backwards through the sequence of numbers by subtracting 1 from the original value entered as the argument for the recursive call. The base case being the num value = 0.
 
-## Given Solution
+*UPDATE* After testing, realized I needed to update the 1 to num inside my recursive call code line. My code now works.
 
+## Given Solution
+function fib(n){
+    if (n <= 2) return 1;
+    return fib(n-1) + fib(n-2);
+}
 
 ## Thoughts after Solution
-
+Wait a second, did I just solve this in a drier way than the lecturer? I need to try more test cases but my code worked for a num value of 5 which returned 55 as the nth value.
