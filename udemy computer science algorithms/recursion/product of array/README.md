@@ -9,6 +9,12 @@ This should be similar to a factorial style recursion problem except I will have
 *UPDATE* Not sure I need to change the array into an object.
 
 ## Given Solution
+function productOfArray(arr) {
+    if(arr.length === 0) {
+        return 1;
+    }
+    return arr[0] * productOfArray(arr.slice(1));
+}
 
 ## Thoughts after Solution
-
+I was originally thinking of conditional statment in the solution as being my edge case for when someone originally enters an empty array but it is my base case. I don't need the for loop because the recursive call here just slices away the next value each call until there is nothing left.
