@@ -1,3 +1,3 @@
-function fib(){
+function fib(num){
     
   }
