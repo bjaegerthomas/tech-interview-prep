@@ -8,6 +8,8 @@ I need to create a function which accepts a whole number. Then I would create an
 
 *UPDATE* running into the issue of initializing the array inside of the function and not having it reset on each recursive call. Instead of the slice function do I increment through the array stepping up 1? But then I feel like i'm recreating the array each time.
 
+*UPDATE* While working through logic it seems to me that I can work backwards through the sequence of numbers by subtracting 1 from the original value entered as the argument for the recursive call. The base case being the num value = 0.
+
 ## Given Solution
 
 
