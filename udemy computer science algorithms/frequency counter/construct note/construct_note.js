@@ -13,7 +13,7 @@ function constructNote(msg, ltr) {
         ltrCount[letter] = ltrCount[letter] ? ltrCount[letter] + 1 : 1;
     }
 
-    for (let letter of ltrCount) {
+    for (let letter in ltrCount) {
         if (!msgCount[letter] || msgCount[letter] < ltrCount[letter]) {
             return false;
         }
