@@ -1,6 +1,6 @@
 function constructNote(msg, ltr) {
     const message = msg.split("").sort();
-    const letters = ltr.splt("").sort();
+    const letters = ltr.split("").sort();
     
     let msgCount = {};
     let ltrCount = {};
@@ -13,11 +13,10 @@ function constructNote(msg, ltr) {
         ltrCount[letter] = ltrCount[letter] ? ltrCount[letter] + 1 : 1;
     }
 
-    let result = [];
-
-    for (i = 0; i <= ltr.length; i++) {
-        if (ltrCount[i] === msgCount[i] && Object.values(ltrCount[i]) < Object.values(msgCount[i])) {
+    for (let letter of ltrCount) {
+        if (msgCount[letter] === ltrCount[letter] && Object.values(ltrCount[letter]) < Object.values(msgCount[letter])) {
             return false;
         }
     }
   }
+  
