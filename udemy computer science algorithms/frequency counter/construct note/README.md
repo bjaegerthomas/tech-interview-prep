@@ -12,9 +12,28 @@ I would think I would need to initialize two objects which would represent the t
 
 *UPDATE* i've cleaned up the syntax and used "in" instead of "of" for my for loop in order to work with an object. gpt also says that I don't need the sort method anymore either since we are looking at frequency count as opposed to order. It was left over from my previous logic.
 
+*UPDATE* Ok, my code works. Let's see what their soolution was.
 
 ## Given Solution
-
+function constructNote(message, letters) {
+  var frequency = {};
+  var frequencyM = {};
+ 
+  for (let i = 0; i < letters.length; i++) {
+    frequency[letters[i]] = ++frequency[letters[i]] || 1;
+  }
+ 
+  for (let i = 0; i < message.length; i++) {
+    frequencyM[message[i]] = ++frequencyM[message[i]] || 1;
+  }
+ 
+  for (let k in frequencyM) {
+    if (!frequency[k]) return false;
+    if (frequencyM[k] > frequency[k]) return false;
+  }
+ 
+  return true;
+}
 
 ## Thoughts after Solution
-
+Very similar code. It took a while but i got there.
