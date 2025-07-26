@@ -11,5 +11,13 @@ Seeing as how it wants me to return an array with only the elements which appear
 *UPDATE* After discussing with gpt my logic was slightly off and I learned about the Number function which helps convert a string to a number which was helpful for converting the keys from the object into numbers for the result array. 
 
 ## Given Solution
+function findAllDuplicates(nums) {
+  let ans = [];
+  var s = new Set();
+  for (let i = 0; i < nums.length; i++) {
+    s.has(nums[i]) ? ans.push(nums[i]) : s.add(nums[i])
+  }
+  return ans;
+}
 
 ## Thoughts after Solution
