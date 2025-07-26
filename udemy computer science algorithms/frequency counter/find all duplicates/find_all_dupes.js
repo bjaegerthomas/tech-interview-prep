@@ -6,7 +6,7 @@ function findAllDuplicates(arr) {
     let result = [];
     for (let i in search) {
         if (search[i] > 1) {
-            result.push(search[i]);
+            result.push(Number[i]);
         }
     }
     return result;
