@@ -6,6 +6,8 @@ Given an array of positive integers, some elements appear twice and others appea
 ## Possible Logic
 Seeing as how it wants me to return an array with only the elements which appear twice, I am womdering if I need to turn the initial array into an object and then back into an array again or if that over complicates things. My thought is I would create a frequency counter for the entire array, turning the intial array into an object and then counting the number of times each element appears. I would intitalize an empty array called result and then use a conditional statement in a loop to determine if an element appears more than once in the object and then would push that key element to the result array. At the end I would return the result array.
 
+*UPDATE* Something is off in my logic. It returned an array but not the correct elements. I think I was accessing the values as opposed to the keys in my second for loop and I also didn't increment.
+
 ## Given Solution
 
 ## Thoughts after Solution
