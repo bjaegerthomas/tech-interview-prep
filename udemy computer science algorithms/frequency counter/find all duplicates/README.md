@@ -8,6 +8,8 @@ Seeing as how it wants me to return an array with only the elements which appear
 
 *UPDATE* Something is off in my logic. It returned an array but not the correct elements. I think I was accessing the values as opposed to the keys in my second for loop and I also didn't increment.
 
+*UPDATE* After discussing with gpt my logic was slightly off and I learned about the Number function which helps convert a string to a number which was helpful for converting the keys from the object into numbers for the result array. 
+
 ## Given Solution
 
 ## Thoughts after Solution
