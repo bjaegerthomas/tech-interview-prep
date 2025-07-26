@@ -4,9 +4,9 @@ function findAllDuplicates(arr) {
         search[num] = (search[num] || 0) +1;
     }
     let result = [];
-    for (let i in search) {
-        if (i > 1) {
-            result.push(result[i]);
+    for (let key in search) {
+        if (search[key] > 1) {
+            result.push(Number[key]);
         }
     }
     return result;
