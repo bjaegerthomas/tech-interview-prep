@@ -5,8 +5,8 @@ function findAllDuplicates(arr) {
     }
     let result = [];
     for (let i in search) {
-        if (search[i] > 1) {
-            result.push(Number[i]);
+        if (i > 1) {
+            result.push(result[i]);
         }
     }
     return result;
