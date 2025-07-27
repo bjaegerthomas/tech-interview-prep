@@ -21,3 +21,4 @@ function findAllDuplicates(nums) {
 }
 
 ## Thoughts after Solution
+It wasn't on my radar to use the new set function to create an object which only stores unique items. This is a clever and streamlined way to do what my code does.
