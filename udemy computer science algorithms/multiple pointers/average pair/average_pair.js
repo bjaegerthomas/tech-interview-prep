@@ -14,6 +14,6 @@ function averagePair(arr, avg){
         else if (newAvg > avg) {
             right--;
         }
-    return result;
     }
+    return result;
 }
