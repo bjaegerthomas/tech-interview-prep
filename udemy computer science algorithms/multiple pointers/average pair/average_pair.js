@@ -3,16 +3,17 @@ function averagePair(arr, avg){
     let right = arr.length -1;
     let result = [];
 
-    while (arr[left] < arr[right]) {
+    while (left < right) {
         let newAvg = (arr[left] + arr[right])/2;
         if (newAvg == avg) {
-            result.push(arr[right], arr[left]);
-            right--;
+            result.push([arr[right], arr[left]]);
         }
         if (newAvg < avg) {
             left++
         }
-        right--;
-    }
+        else if (newAvg > avg) {
+            right--;
+        }
     return result;
-  }
+    }
+}
