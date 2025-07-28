@@ -6,7 +6,7 @@ function averagePair(arr, avg){
     while (left < right) {
         let newAvg = (arr[left] + arr[right])/2;
         if (newAvg == avg) {
-            result.push([arr[right], arr[left]]);
+            result.push([arr[left], arr[right]]);
             left++;
             right--;
         }
