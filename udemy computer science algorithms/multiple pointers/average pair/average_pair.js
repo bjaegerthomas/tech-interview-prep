@@ -10,10 +10,10 @@ function averagePair(arr, avg){
             left++;
             right--;
         }
-        if (newAvg < avg) {
+        else if (newAvg < avg) {
             left++
         }
-        else if (newAvg > avg) {
+        else {
             right--;
         }
     }
