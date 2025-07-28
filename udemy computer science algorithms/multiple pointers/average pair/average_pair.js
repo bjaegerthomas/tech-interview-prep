@@ -7,6 +7,8 @@ function averagePair(arr, avg){
         let newAvg = (arr[left] + arr[right])/2;
         if (newAvg == avg) {
             result.push([arr[right], arr[left]]);
+            left++;
+            right--;
         }
         if (newAvg < avg) {
             left++
