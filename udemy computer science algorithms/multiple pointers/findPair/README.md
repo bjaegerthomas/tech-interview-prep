@@ -8,7 +8,54 @@ First we need to sort the array. Next we need to initialize two pointers which w
 
 *UPDATE* If the condition is greater than n I need to decrement the right pointer by 1. If the condition is less than n I need to increment the left pointer by 1.
 
+*UPDATE* I had created a variable called val which calculated the difference between the arr value at the right index and the arr value at the left index but I had it ouside my while loop so the val never changed resulting in a false return. I changed that and now my function works.
+
 ## Given Solution
 
+// O(n) space + O(n) time
+function findPair(arr, n) {
+  // if n is 0, we just need to see if there's any duplicate in the array
+  if (n === 0) {
+    const seen = new Set();
+    for (let num of arr) {
+      if (seen.has(num)) {
+        return true;
+      }
+      seen.add(num);
+    }
+    return false;
+  }
+ 
+  // for non-zero n, place all elements in a set
+  const setVals = new Set(arr);
+ 
+  // check for val + n or val - n in the set
+  for (let val of arr) {
+    if (setVals.has(val + n) || setVals.has(val - n)) {
+      return true;
+    }
+  }
+ 
+  return false;
+}
+ 
+// O(1) space + O(n log n) time
+function findPair(arr, num) {
+  arr.sort((a, b) => a - b);
+  let i = 0;
+  let j = 1;
+  while (i < arr.length && j < arr.length) {
+    if (i !== j && Math.abs(arr[j] - arr[i]) === Math.abs(num)) {
+      return true
+    } else if (arr[j] - arr[i] < num) {
+      j++
+    } else {
+      i++
+    }
+  }
+  return false;
+}
+
 ## Thoughts after Solution
+His second solution is closer to mine so I will comment on that first. I didn't realize that my sort needed to have a condition in it to account for the ascending or descending order of values but that makes sense given that otherwise it would sort the array lexicographically. I also didn't think about whether or not my left or right pointer might be pointing to the same value. In addition I wasn't aware I needed to use math.abs for the absolute value of my difference and my inputed number. Other than that my solution was fairly on the same track with logic and syntax.
 
