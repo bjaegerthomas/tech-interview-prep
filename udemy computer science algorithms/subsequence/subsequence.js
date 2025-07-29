@@ -1,3 +1,3 @@
-function isSubsequence() {
-    // good luck. Add any arguments you deem necessary.
+function isSubsequence(a, b) {
+    
   }
