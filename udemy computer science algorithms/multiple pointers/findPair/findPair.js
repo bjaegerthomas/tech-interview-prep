@@ -1,3 +1,3 @@
-function findPair(n) {
+function findPair(arr, n) {
 
 }
