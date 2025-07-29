@@ -9,8 +9,11 @@ function findPair(arr, n) {
             return true;
         }
         else if (val > n) {
-            
-
+            right--;
+        }
+        else {
+            left++;
         }
     }
+    return false;
 }
