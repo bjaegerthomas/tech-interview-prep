@@ -2,9 +2,11 @@ function findPair(arr, n) {
     arr.sort();
     let left = 0;
     let right = arr.length - 1;
-    let val = arr[right] - arr[left];
 
     while (left < right) {
+        
+        let val = arr[right] - arr[left];
+
         if (val == n) {
             return true;
         }
