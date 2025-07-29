@@ -9,5 +9,16 @@ First we need to take in two strings to the function. We then create an array fo
 *UPDATE* My code seems to work! Let's check the solution and see the difference.
 
 ## Given Solution
-
+function isSubsequence(str1, str2) {
+  var i = 0;
+  var j = 0;
+  if (!str1) return true;
+  while (j < str2.length) {
+    if (str2[j] === str1[i]) i++;
+    if (i === str1.length) return true;
+    j++;
+  }
+  return false;
+}
 ## Thoughts after Solution
+Their solution allows for an edge case of an empty string. I also didn't realize that i didn't have to break the string up with split; that you can access elements of it with bracket and index notation, so i have some unnecessary steps in my code and could make it drier. Our appraioches are pretty similar but i could make mine even drier.
