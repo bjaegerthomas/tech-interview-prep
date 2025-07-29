@@ -59,3 +59,5 @@ function findPair(arr, num) {
 ## Thoughts after Solution
 His second solution is closer to mine so I will comment on that first. I didn't realize that my sort needed to have a condition in it to account for the ascending or descending order of values but that makes sense given that otherwise it would sort the array lexicographically. I also didn't think about whether or not my left or right pointer might be pointing to the same value. In addition I wasn't aware I needed to use math.abs for the absolute value of my difference and my inputed number. Other than that my solution was fairly on the same track with logic and syntax.
 
+The first solution is interesting because I keep forgetting about the ability to create a set which makes an object I can compare with only unique values and while preserving the original inserted order. It also allows for faster lookups than an array. It also looks to see if there any duplicates in the array as a first condition in the event n = 0 which is a good first check for true.
+
