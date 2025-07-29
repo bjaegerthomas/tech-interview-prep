@@ -16,4 +16,5 @@ function isSubsequence(a, b) {
             p2++;
         }
     }
+    return true;
 }
