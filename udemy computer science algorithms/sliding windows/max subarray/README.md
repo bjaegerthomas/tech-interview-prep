@@ -13,7 +13,22 @@ Full disclosure I watched the video again on sliding windows and the example the
 *UPDATE* I did my best to not copy the code and try and recall the logic from the lesson. My code works after a few iterations and some syntax issues but now i need to check it against the given solution.
 
 ## Given Solution
+function maxSubarraySum(arr, num){
+    if (arr.length < num) return null;
+ 
+    let total = 0;
+    for (let i=0; i<num; i++){
+       total += arr[i];
+    }
+    let currentTotal = total;
+    for (let i = num; i < arr.length; i++) {
+       currentTotal += arr[i] - arr[i-num];
+       total = Math.max(total, currentTotal);
+    }
+    return total;
+}
 
 ## Thoughts after Solution
+What I like here is that they incorporated an edge case at the beginning if the array is empty and returns a null value because there is nothing to add together. Additionally they initialize the temporary sum or current total after the first for loop rather than letting it equal 0 at the top along with the maximum sum or total. Lastly, instead of creating a conditional if statement to see which is greater in the second for loop instead, opting for the built in function of Math.max.
 
 
