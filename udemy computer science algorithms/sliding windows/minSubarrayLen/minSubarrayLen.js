@@ -1,0 +1,3 @@
+function minSubarrayLen (arr, num) {
+    
+}
