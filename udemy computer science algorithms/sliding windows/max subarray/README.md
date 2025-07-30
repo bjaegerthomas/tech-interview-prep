@@ -10,6 +10,8 @@ First we will accept two inputs, one is an array of integers and the other a num
 
 Full disclosure I watched the video again on sliding windows and the example they gave was this exact problem so it was hard to not kind of know what they were looking for.
 
+*UPDATE* I did my best to not copy the code and try and recall the logic from the lesson. My code works after a few iterations and some syntax issues but now i need to check it against the given solution.
+
 ## Given Solution
 
 ## Thoughts after Solution
