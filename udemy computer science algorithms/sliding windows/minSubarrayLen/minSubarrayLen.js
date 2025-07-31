@@ -1,4 +1,4 @@
-function minSubarrayLen (arr, num) {
+function minSubarrayLen (arr, sum) {
     if (arr == []) {
         return null;
     }
