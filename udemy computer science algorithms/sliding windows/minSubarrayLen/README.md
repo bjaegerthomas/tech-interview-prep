@@ -41,10 +41,39 @@ function minSubarrayLen(arr, sum) {
       break;
     }
   }
+}
 
 ## Given Solution
+function minSubArrayLen(nums, sum) {
+  let total = 0;
+  let start = 0;
+  let end = 0;
+  let minLen = Infinity;
+ 
+  while (start < nums.length) {
+    // if current window doesn't add up to the given sum then 
+		// move the window to right
+    if(total < sum && end < nums.length){
+      total += nums[end];
+			end++;
+    }
+    // if current window adds up to at least the sum given then
+		// we can shrink the window 
+    else if(total >= sum){
+      minLen = Math.min(minLen, end-start);
+			total -= nums[start];
+			start++;
+    } 
+    // current total less than required total but we reach the end, need this or else we'll be in an infinite loop 
+    else {
+      break;
+    }
+  }
+ 
+  return minLen === Infinity ? 0 : minLen;
+}
 
 ## Thoughts after Solution
-
+And there you have it. The gpt version and given version are the same. I think I tried to complicate it too much and was redundant with adding for loops with counters, etc. The variables themselves are already counters and can be updated as the window moves along, because we don't need to reset the values. When all of the logic could have been contained inside of a while loop. The other thing is, I know that sliding window functions need a while loop, which I had forgotten and should have been trying to refigure my logic to accomodate that appraoch instead of changing course. Once again too, I need to be implementing Math.min and Math.max more.
 
 
