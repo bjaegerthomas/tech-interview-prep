@@ -12,7 +12,35 @@ First an edge case check for an inputed empty array and a return value of null. 
 
 *UPDATE* I was definitely using the wrong syntax for checking for an empty array. I'm going to try and change my while loop to a for loop and initialize minLen as my counter.
 
-*UPDATE* While loop has been changed to a for loop with some of the logic of the while loop. I moved the edge case check of the sliding window length extending beyond the original array length into the main body of the function so it will exit the function instead of continuing on and giving an answer in addition to the zero value.
+*UPDATE* While loop has been changed to a for loop with some of the logic of the while loop. I moved the edge case check of the sliding window length extending beyond the original array length into the main body of the function so it will exit the function instead of continuing on and giving an answer in addition to the zero value. I had a capitilization issue with minLen in the for loop which has been resolved. Also, i didn't declare the variable minLen outside of the local scope of the first for loop. Needed to update old num variable name to sum.
+
+*UPDATE* I've been asking gpt to look at logic without giving answers but am hitting a wall with how i am thinking about this logically. Going to add the given solution shortly and see what the differences are, because gpt's version was much simpler than what I am trying to do and did end up using a while loop like I had originally tried to do. Adding their version below as a comparison as well:
+
+*side not* I need to start adding some comments to explain at least what certain portions of code block are doing.
+
+function minSubarrayLen(arr, sum) {
+  let minLen = Infinity;
+  let start = 0;
+  let end = 0;
+  let total = 0;
+
+  while (start < arr.length) {
+    // Expand window to the right as long as total is less than target
+    if (total < sum && end < arr.length) {
+      total += arr[end];
+      end++;
+    }
+    // If total is enough, try to shrink window from the left
+    else if (total >= sum) {
+      minLen = Math.min(minLen, end - start);
+      total -= arr[start];
+      start++;
+    }
+    // If total is less than sum but end has hit the array boundary
+    else {
+      break;
+    }
+  }
 
 ## Given Solution
 

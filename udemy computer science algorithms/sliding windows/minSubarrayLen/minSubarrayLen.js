@@ -3,24 +3,25 @@ function minSubarrayLen (arr, sum) {
         return null;
     }
     let newSum = 0;
-    for (let minLen = 0; minLen < arr.length; minLEn++) {
+    let minLen = 0;
+    for (let i = minLen; i < arr.length; i++) {
         if (newSum >= sum) {
             return minLen;
         }
         else {
-            newSum = newSum + arr[minLen];
-            minLen++;
+            newSum = newSum + arr[i];
         }
+        minLen = i;
     } 
     if (minLen >= arr.length) {
         return 0;
     }
     let newLen = minLen;
-    for (let i = newLen; newLen < arr.length; i++) {
-        newSum = newSum - arr[i - num] + arr[i];
+    for (let i = newLen; i < arr.length; i++) {
+        newSum = newSum - arr[i - newLen] + arr[i];
         if (newSum >= sum) {
-            if (i < newLen) {
-                minLen = i;
+            if (i < minLen) {
+                newLen = i;
             }
         }
     }
