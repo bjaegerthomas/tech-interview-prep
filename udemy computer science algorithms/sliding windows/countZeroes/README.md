@@ -8,6 +8,8 @@ I would initialize three variables: start with a value of zero, end with a valua
 
 *UPDATE* few flaws with logic. I didn't add a check for when middle === 0. I also tried to assign a value to middle in another condition instead of checking if it was equal. My middle variable was taking in end minus start as opposed to end plus start. I was also adding one to this value later to define total in the loop but that means I would be off by one. And lastly I needed to place the original inputed array in as the argument when creating the new set.
 
+*UPDATE* Now my code works with those fixes. Let's compare it the given solution and see what differences we can find.
+
 ## Given Solution
 
 
