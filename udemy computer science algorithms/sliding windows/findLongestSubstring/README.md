@@ -60,5 +60,7 @@ function findLongestSubstring(str) {
 
 When asking gpt to explain this line by line I got a better sense of this approach but am still fuzzy on it and also with the input of "abcabcbb" it says it will return 4 as the longest, except that isn't correct so I'm not sure if the given solution works.
 
+*UPDATE* the solution works when I tested this same input in a snippet, which it gave the longest as being 3.
+
 
 
