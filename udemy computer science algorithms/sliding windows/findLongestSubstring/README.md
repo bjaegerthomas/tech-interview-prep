@@ -8,6 +8,8 @@ First I'm going to initialize a variable start with a value of zero and a variab
 
 *UPDATE* Realizing my current solution only tests to see if two characters side by side are distinct, not all the characters in a substring. Need to reconfigure possibly making a set.
 
+*UPDATE* Ok so after thinking about it a little I updated the js file with an edge case of an empty inputed string. In addition I created a tempStr and curStr for use in using a set to check for unique characters in ehlping to determine the longest substring.
+
 ## Given Solution
 
 ## Thoughts after Solution
