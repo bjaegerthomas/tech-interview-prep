@@ -10,6 +10,32 @@ First I'm going to initialize a variable start with a value of zero and a variab
 
 *UPDATE* Ok so after thinking about it a little I updated the js file with an edge case of an empty inputed string. In addition I created a tempStr and curStr for use in using a set to check for unique characters in ehlping to determine the longest substring.
 
+*UPDATE* Here is the fix, that gpt gave to my current version of the solution:
+
+function findLongestSubstring(str) {
+  let seen = new Set();
+  let start = 0;
+  let end = 0;
+  let maxLen = 0;
+
+  while (end < str.length) {
+    if (!seen.has(str[end])) {
+      // No duplicate — expand the window
+      seen.add(str[end]);
+      maxLen = Math.max(maxLen, end - start + 1);
+      end++;
+    } else {
+      // Duplicate found — shrink the window from the left
+      seen.delete(str[start]);
+      start++;
+    }
+  }
+
+  return maxLen;
+}
+
+It would appear that I was on the right track with using set to evaluate unique characters, just not the right implementation. I'm also noting that often times streamlined coditional statements for these solutions often times implement the not operator.
+
 ## Given Solution
 
 ## Thoughts after Solution

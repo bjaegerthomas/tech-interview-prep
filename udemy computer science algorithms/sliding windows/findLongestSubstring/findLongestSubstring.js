@@ -10,7 +10,7 @@ function findLongestSubstring (str) {
     
     while (start < str.length) {
         // first we need to add the current ending index of the sliding window to our temporary string
-        tempStr.append(str[end]);
+        tempStr.push(str[end]);
         // Next we make a new set out of the temp string
         let curStr = new Set (tempStr);
         // If there all unique values then we can move the ending index up one
