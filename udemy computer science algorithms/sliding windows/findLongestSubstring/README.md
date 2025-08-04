@@ -38,7 +38,27 @@ It would appear that I was on the right track with using set to evaluate unique 
 
 ## Given Solution
 
+function findLongestSubstring(str) {
+  let longest = 0;
+  let seen = {};
+  let start = 0;
+ 
+  for (let i = 0; i < str.length; i++) {
+    let char = str[i];
+    if (seen[char]) {
+      start = Math.max(start, seen[char]);
+    }
+    // index - beginning of substring + 1 (to include current in count)
+    longest = Math.max(longest, i - start + 1);
+    // store the index of the next char so as to not double count
+    seen[char] = i + 1;
+  }
+  return longest;
+}
+
 ## Thoughts after Solution
+
+When asking gpt to explain this line by line I got a better sense of this approach but am still fuzzy on it and also with the input of "abcabcbb" it says it will return 4 as the longest, except that isn't correct so I'm not sure if the given solution works.
 
 
 
