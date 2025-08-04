@@ -11,7 +11,29 @@ I would initialize three variables: start with a value of zero, end with a valua
 *UPDATE* Now my code works with those fixes. Let's compare it the given solution and see what differences we can find.
 
 ## Given Solution
-
+function countZeroes(arr) {
+  // add whatever parameters you deem necessary - good luck!
+  let firstZero = findFirst(arr)
+  if (firstZero === -1) return 0;
+ 
+  return arr.length - firstZero
+}
+ 
+function findFirst(arr, low = 0, high = arr.length - 1) {
+  if (high >= low) {
+    let mid = low + Math.floor((high - low) / 2)
+    if ((mid === 0 || arr[mid - 1] === 1) && arr[mid] === 0) {
+      return mid;
+    } else if (arr[mid] === 1) {
+      return findFirst(arr, mid + 1, high)
+    }
+    return findFirst(arr, low, mid - 1)
+  }
+  return -1;
+}
 
 ## Thoughts after Solution
+Well, it would appear that they incorporated recursion into their solution which I wasn't sure if we should be doing just yet since it isn't covered until the next section. I do appreciate how this hones in on the first zero in the recursive function and kicks it back out to countZereos. I'm going to throw both solutions into chatgpt to see what their time and space complexities are.
+
+*UPDATE* My solution is O(n) and theirs is O(log)n for both time and space.
 
