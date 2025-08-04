@@ -6,7 +6,6 @@ Write a function called findLongestSubstring, which accepts a string and returns
 ## Possible Logic
 First I'm going to initialize a variable start with a value of zero and a variable end wioth a value of one, signaling the beginning and ending index of the sliding window. I'm also going to initialize a variable named maxLen to hold the largest length of the substring with unique characters and set it to zero. Then create an overall while loop with a similar condition to the minSubarrayLen problem checking that the beginning index of the string is less than the overall length of the string. First I want to create a condition to check if inputed string at index start and inputed string at index end are equal if they are add on to start and one to end. Else if they aren't add let maxLen equal end plus one minus start and add one to end. Once the loop has completed return maxLen.
 
-
 ## Given Solution
 
 ## Thoughts after Solution
