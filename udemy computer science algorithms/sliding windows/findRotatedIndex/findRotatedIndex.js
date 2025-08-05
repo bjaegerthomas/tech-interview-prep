@@ -1,4 +1,4 @@
-function sortedFrequency(arr, num) {
+function findRotatedIndex(arr, num) {
     let index = findFirst(arr, num);
     if (index === -1) return null;
     return index;
@@ -15,8 +15,5 @@ function sortedFrequency(arr, num) {
         return findFirst(arr, num, low, mid - 1);
       }
     }
-    else if (low > high) {
-        return findFirst(arr, num, low +1, high);
-    }
-    return -1
+    return findFirst(arr, num, low -1, high);
   }
