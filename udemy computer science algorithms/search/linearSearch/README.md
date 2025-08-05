@@ -6,6 +6,7 @@ Write a function called linearSearch which accepts an array and a value, and ret
 Don't use indexOf to implement this function!
 
 ## Possible Logic
+I can create a for loop to loop through every element in the array and check it against the inputed value.
 
 ## Given Solution
 
