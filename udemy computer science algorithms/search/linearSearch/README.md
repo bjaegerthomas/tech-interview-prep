@@ -19,4 +19,5 @@ function linearSearch(arr, val){
 }
 
 ## Thoughts after Solution
+Straight forward approach. Mine is the same as the given.
 
