@@ -1,11 +1,15 @@
 function selectionSort(arr) {
-    let small = 0;
-    let comp = 1;
-    function swap(arr, small, comp) {
-        if (arr[comp] < arr[small]) {
-            let temp = comp;
-            comp = small;
-            small = temp;
+    for (let i = 0; i < arr.length; i++) {
+        let small = i;
+        for (let j = i + 1; j < arr. length; j++){
+            if (arr[j] < arr[small]) {
+                temp = j;
+            }
+        }
+        if (small !== i) {
+            let temp = arr[i];
+            arr[i] = arr[small];
+            arr[small] = temp;
         }
     }
     return arr;
