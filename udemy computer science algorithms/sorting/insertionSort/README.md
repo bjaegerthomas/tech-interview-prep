@@ -5,8 +5,8 @@ Create a sorting function which uses the left portion of the array as the sorted
 
 ## Possible Logic
 First I need to pick the second element in the array and compare it to the sorted portion of the array. Looping over until I find the correct position for it.
- Then move to the next element and check if it is in the correct position. Continue looping until all elements have been sorted and then return the array.
- 
+Then move to the next element and check if it is in the correct position. Continue looping until all elements have been sorted and then return the array.
+
 ## Given Solution
 
 ## Thoughts after Solution
