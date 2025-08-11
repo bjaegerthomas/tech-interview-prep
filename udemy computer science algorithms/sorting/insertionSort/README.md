@@ -26,3 +26,5 @@ insertionSort([2,1,9,76,4])
 
 ## Thoughts after Solution
 The given solution only swaps the variable once, where as mine does it every time until it gets the element inserted into the correct place. Less cache memory used. Both have the same time complexity.
+
+*UPDATE* This algorithm is good for data that is continously coming in.
