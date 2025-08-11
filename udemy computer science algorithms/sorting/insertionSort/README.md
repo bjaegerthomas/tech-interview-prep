@@ -1,7 +1,7 @@
 # Insertion Sort
 
 ## Task Overview
-Create a sorting function which uses the left portion of the array as the sorted collection and compares other elements in the array as it loops over, placing those new elements into the sorted portion in ascending order.
+Implement insertionSort  . Given an array, both algorithms will sort the values in the array. The functions take 2 parameters: an array and an optional comparator function. The comparator function is a callback that will take two values from the array to be compared. The function returns a negative value if the first value is less than the second, a positive value if the first value is greater than the second, and 0 if both values are equal. The default comparator you provide should assume that the two parameters are numbers and that we are sorting the values from smallest to largest.
 
 ## Possible Logic
 First I need to pick the second element in the array and compare it to the sorted portion of the array. Looping over until I find the correct position for it.
