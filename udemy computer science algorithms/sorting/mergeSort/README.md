@@ -17,7 +17,7 @@ In order to implement this function, you'll also need to implement a merge funct
 You can read more merge sort here: https://www.rithmschool.com/courses/javascript-computer-science-fundamentals/intermediate-sorting-algorithms
 
 ## Possible Logic
-This is a bit more complicated and so I am merely watching his explanation of it and and the code break down rather than attempt it on my own before seeing the final solution
+This is a bit more complicated and so I am merely watching his explanation of it and and the code break down rather than attempt it on my own before seeing the final solution.
 
 ## Given Solution
 
