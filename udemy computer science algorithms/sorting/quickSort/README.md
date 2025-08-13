@@ -27,6 +27,36 @@ This is a bit more complicated and so I am merely watching his explanation of it
 *UPDATE* I tried working on the solution for the helper function "pivot" but the starter code for the exercise included a comparotor variable which he doesn't actually use in his given solution.
 
 ## Given Solution
+function pivot(arr, start=0, end=arr.length+1){
+    function swap(array, i, j) {
+      var temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+  
+    var pivot = arr[start];
+    var swapIdx = start;
+  
+    for(var i = start + 1; i < arr.length; i++){
+      if(pivot > arr[i]){
+        swapIdx++;
+        swap(arr,swapIdx,i);
+      }
+    }
+    swap(arr,start,swapIdx);
+    return swapIdx;
+  }
+  
+  function quickSort(arr, left = 0, right = arr.length -1){
+    if(left < right){
+        let pivotIndex = pivot(arr, left, right) //3
+        //left
+        quickSort(arr,left,pivotIndex-1);
+        //right
+        quickSort(arr,pivotIndex+1,right);
+      }
+     return arr;
+} 
 
 ## Thoughts after Solution
 
