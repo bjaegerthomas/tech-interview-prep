@@ -24,6 +24,8 @@ The default comparator you provide should assume that the two parameters are num
 ## Possible Logic
 This is a bit more complicated and so I am merely watching his explanation of it and and the code break down rather than attempt it on my own before seeing the final solution.
 
+*UPDATE* I tried working on the solution for the helper function "pivot" but the starter code for the exercise included a comparotor variable which he doesn't actually use in his given solution.
+
 ## Given Solution
 
 ## Thoughts after Solution
