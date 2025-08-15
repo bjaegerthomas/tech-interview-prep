@@ -73,4 +73,9 @@ class SinglyLinkedList{
         }
         return current;
     }
+    set(index, val){
+        if(!this.get(index)) return false;
+        current = val;
+        return true;
+    }
 }
