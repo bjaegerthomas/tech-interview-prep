@@ -94,15 +94,14 @@ class SinglyLinkedList{
         this.length++;
         return true;
     }
-    remove(index, val){
-        if(index < 0 || index >this.length) return false;
-        if(index === this.length - 1) return !!this.pop(val);
-        if(index === 0) return !!this.shift(val);
-
-        var prev = this.get(index - 1);
-        var temp = this.get(index + 1);
-        prev.next = temp;
+    remove(index){
+        if(index < 0 || index >= this.length) return undefined;
+        if(index === 0) return this.shift();
+        if(index === this.length - 1) return this.pop();
+        var previousNode = this.get(index - 1);
+        var removed = previousNode.next;
+        previousNode.next = removed.next;
         this.length--;
-        return val;
+        return removed;
     }
 }
