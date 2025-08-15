@@ -65,3 +65,22 @@ Inside of all our instance methods and constructor, the keyword "this" refers to
 ## Class Methods
 
 We can use the "static" keyword for class methods which define methods pertinent to classes but not neccessarily to individual instances of a class. It is essentially a helper method within the class that performs a utility function. When called, you must use the class name, then a period, and then the method name. Again, we are not calling this method on an individual instance but the class.
+
+class Point {
+  constructor(x, y) {
+    this.x = x;
+    this.y = y;
+  }
+
+  static distance(a, b) {
+    const dx = a.x - b.x;
+    const dy = a.y - b.y;
+
+    return Math.hypot(dx, dy);
+  }
+}
+
+const p1 = new Point(5, 5);
+const p2 = new Point(10, 10);
+
+console.log(Point.distance(p1, p2)); // 7.0710678118654755
