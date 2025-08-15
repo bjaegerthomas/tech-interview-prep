@@ -7,6 +7,7 @@ Data Structures are collections of values, the relationship among them, and the 
 A class is a blueprint for creating objects with pre-defined properties and methods.
 
 The method to create new objects must be called "constructor".
+
 The "class" keyword creates a constant, so you can not redinfe it.
 
 We use the "new" keyword to instantiate objects from a class.
@@ -59,5 +60,8 @@ class Student {
 let firstStudent = new Student("Colt", "Steele",1);
 let secondStudent = new Student("Blue", "Steele",2);
 
+Inside of all our instance methods and constructor, the keyword "this" refers to the object created from that class (also known as an instance).
+
 ## Class Methods
 
+We can use the "static" keyword for class methods which define methods pertinent to classes but not neccessarily to individual instances of a class. It is essentially a helper method within the class that performs a utility function. When called, you must use the class name, then a period, and then the method name. Again, we are not calling this method on an individual instance but the class.
