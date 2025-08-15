@@ -63,4 +63,11 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
+    get(val){
+        for (let i = 0; i < this.length; i++){
+            if(val < 0 || val >= this.length) return null;
+            if (this.val = val) return i;
+            else this.next;
+        }
+    }
 }
