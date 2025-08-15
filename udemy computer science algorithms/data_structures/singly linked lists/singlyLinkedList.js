@@ -104,4 +104,19 @@ class SinglyLinkedList{
         this.length--;
         return removed;
     }
+    reverse(){
+        var oldHead = this.head;
+        this.head = this.tail;
+        this.tail = oldHead;
+        var next = undefined;
+        var prev = undefined;
+        var node = this.head;
+        for (let i = 0; i < this.length; i++){
+            next = this.next;
+            node.next = prev;
+            prev = this.node;
+            node = next;
+        }
+        return this.list;
+    }
 }
