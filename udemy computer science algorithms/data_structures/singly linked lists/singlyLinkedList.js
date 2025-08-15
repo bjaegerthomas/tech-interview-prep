@@ -23,4 +23,14 @@ class SinglyLinkedList{
         this.length++;
         return this;
     }
+    pop(){
+        let temp = this.head;
+        let last = this.head;
+        while(temp != null){
+            last = temp;
+            temp = this.temp.next;
+        }
+        last = this.tail;
+        return last;
+    }
 }
