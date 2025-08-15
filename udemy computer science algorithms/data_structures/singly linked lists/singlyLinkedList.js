@@ -15,6 +15,14 @@ class SinglyLinkedList{
         this.length = 0;
     }
     push(val){
-        
+        if (this.length === 0) {
+            this.head = val;
+            this.tail = val;
+            this.length++;
+        }
+        else {
+            this.tail = val;
+            this.length++;
+        } 
     }
 }
