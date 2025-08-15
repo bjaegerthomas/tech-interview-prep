@@ -105,18 +105,17 @@ class SinglyLinkedList{
         return removed;
     }
     reverse(){
-        var oldHead = this.head;
-        this.head = this.tail;
-        this.tail = oldHead;
-        var next = undefined;
-        var prev = undefined;
         var node = this.head;
-        for (let i = 0; i < this.length; i++){
-            next = this.next;
-            node.next = prev;
-            prev = this.node;
-            node = next;
+        this.head = this.tail;
+        this.tail = node;
+        var next;
+        var prev = null;
+        for(var i = 0; i < this.length; i++){
+          next = node.next;
+          node.next = prev;
+          prev = node;
+          node = next;
         }
-        return this.list;
-    }
+        return this;
+      }
 }
