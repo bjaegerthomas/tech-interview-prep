@@ -66,4 +66,26 @@ class DoublyLinkedList{
         this.length++;
         return this;
     }
+    get(index){
+        if(index < 0 || index >= this.length) return null;
+        var avg = Math.floor(this.length/2);
+        var counter = 0;
+
+        if(index < avg){
+            var current = this.head;
+            while(counter !== index){
+                current = current.next;
+                counter++;
+            }
+            return current;
+        }
+        else{
+            var current = this.tail;
+            while(counter !== index){
+                current = current.prev;
+                counter--;
+            }
+            return current;
+        }
+    }
 }
