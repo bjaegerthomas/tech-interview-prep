@@ -69,9 +69,9 @@ class DoublyLinkedList{
     get(index){
         if(index < 0 || index >= this.length) return null;
         var avg = Math.floor(this.length/2);
-        var counter = 0;
 
         if(index < avg){
+            var counter = 0;
             var current = this.head;
             while(counter !== index){
                 current = current.next;
@@ -80,6 +80,7 @@ class DoublyLinkedList{
             return current;
         }
         else{
+            var counter = this.length + 1;
             var current = this.tail;
             while(counter !== index){
                 current = current.prev;
