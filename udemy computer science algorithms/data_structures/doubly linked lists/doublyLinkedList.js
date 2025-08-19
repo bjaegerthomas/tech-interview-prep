@@ -55,15 +55,13 @@ class DoublyLinkedList{
     }
     unshift(val){
         var newNode = new Node(val);
-        if(!this.head){
+        if(this.length === 0) {
             this.head = newNode;
-            this.tail = this.head;
-        }
-        else{
-            var newNext = this.head;
-            newNode.next = newNext;
+            this.tail = newNode;
+        } else {
+            this.head.prev = newNode;
+            newNode.next = this.head;
             this.head = newNode;
-            newNext.prev = newNode;
         }
         this.length++;
         return this;
