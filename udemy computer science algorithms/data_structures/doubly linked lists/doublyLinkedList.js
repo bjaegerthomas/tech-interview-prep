@@ -80,7 +80,7 @@ class DoublyLinkedList{
             return current;
         }
         else{
-            var counter = this.length + 1;
+            var counter = this.length - 1;
             var current = this.tail;
             while(counter !== index){
                 current = current.prev;
