@@ -116,11 +116,10 @@ class DoublyLinkedList{
         if(index === 0) return this.shift();
         if(index === this.length - 1) return this.pop();
 
-        var beforeNode = this.get(index - 1);
-        var afterNode = beforeNode.next;
+        var beforeIdx = this.get(index - 1);
+        var afterIdx = this.get(index - 1);
 
-        beforeNode.next = newNode, newNode.prev = beforeNode;
-        newNode.next = afterNode, afterNode.prev = newNode;
+        beforeIdx.next = afterIdx, afterIdx.prev = beforeIdx;
         
         this.length--;
         return removed;
