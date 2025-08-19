@@ -40,14 +40,17 @@ class DoublyLinkedList{
         return poppedNode;
     }
     shift(){
-        if(!this.head) return undefined;
-        var currentHead = this.head;
-        this.head = currentHead.next;
-        thisHead.prev = null;
-        this.length--;
-        if(this.length === 0){
+        if(this.length === 0) return undefined;
+        var oldHead = this.head;
+        if(this.length === 1){
+            this.head = null;
             this.tail = null;
+        }else{
+            this.head = oldHead.next;
+            this.head.prev = null;
+            oldHead.next = null;
         }
-        return currentHead;
+        this.length--;
+        return oldHead;
     }
 }
