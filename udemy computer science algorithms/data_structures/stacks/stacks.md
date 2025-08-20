@@ -15,3 +15,8 @@ Routing, like the history object in your browser, is treated like a stack
 We can create a stack structure in javascript by using push and pop with an array.
 
 We could also reverse the order of the array by using unshift and shift to the front of the array, still adhering to the LIFO principle. This is less efficient though because the array needs to be reindexed each time and the Big O notation of this is substantial with larger arrays.
+
+# Big O Notation
+
+Insertion O(1)
+Removal O(1)
