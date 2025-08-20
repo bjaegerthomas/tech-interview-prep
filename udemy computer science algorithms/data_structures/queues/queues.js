@@ -1,36 +1,37 @@
 class Node {
-    constructor(value) {
+    constructor(value){
         this.value = value;
         this.next = null;
     }
 }
 
 class Queue {
-    constructor() {
+    constructor(){
         this.first = null;
         this.last = null;
         this.size = 0;
     }
-    enqueue(value){
+    enqueue(val){
         var newNode = new Node(val);
         if(!this.first){
             this.first = newNode;
-            this.last = this.first;
+            this.last = newNode;
         } else {
             this.last.next = newNode;
             this.last = newNode;
         }
-        this.size++;
-        return size;
+        return ++this.size;
     }
+
     dequeue(){
-        if(!this.first) return undefined;
-        var currentLast = this.first;
-        this.first = currentLast.next;
-        this.size--;
-        if(this.size === 0){
-            this.first = null;
+        if(!this.first) return null;
+
+        var temp = this.first;
+        if(this.first === this.last) {
+            this.last = null;
         }
-        return currentLast;
+        this.first = this.first.next;
+        this.size--;
+        return temp.value;
     }
 }
