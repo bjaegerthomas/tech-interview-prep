@@ -10,3 +10,8 @@ Things like waiting to join an online game while in the game lobby uses a queue 
 Background tasks on your computer.
 Uploading or downloading resources.
 Printing/Task processing.
+
+# Big O notation
+
+Insertion O(1)
+Removal O(1)
