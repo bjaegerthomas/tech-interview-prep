@@ -11,7 +11,7 @@ class Queue {
         this.last = null;
         this.size = 0;
     }
-    push(value){
+    enqueue(value){
         var newNode = new Node(val);
         if(!this.first){
             this.first = newNode;
@@ -23,21 +23,14 @@ class Queue {
         this.size++;
         return size;
     }
-    pop(){
+    dequeue(){
         if(!this.first) return undefined;
-        var current = this.first;
-        var newLast = current;
-        while(current.next){
-            newLast = current;
-            current = current.next;
-        }
-        this.last = newLast;
-        this.last.next = null;
+        var currentLast = this.first;
+        this.first = currentLast.next;
         this.size--;
         if(this.size === 0){
             this.first = null;
-            this.last = null;
         }
-        return current;
+        return currentLast;
     }
 }
