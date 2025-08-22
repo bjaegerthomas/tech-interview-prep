@@ -15,4 +15,7 @@ Siblings - a group of nodes with the same parent
 Leaf - is a node with no children
 Edge - connection between one node and another
 
+# Uses
+
+HTML DOM
 
