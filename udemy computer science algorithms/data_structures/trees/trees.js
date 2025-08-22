@@ -12,9 +12,9 @@ class BinarySearchTree {
     }
     insert(value){
         var newNode = new Node(value);
-        var tree = new BinarySearchTree();
         if (!root){
             this.root = newNode;
+            return this;
         }
         else if (value < this.root && !this.left){
             this.left = newNode;
