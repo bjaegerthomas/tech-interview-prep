@@ -18,4 +18,15 @@ Edge - connection between one node and another
 # Uses
 
 HTML DOM
+Network Routing
+Abstract Syntax Trees - a way of describing the syntax of a programming language using a tree structure
+Artificial Intelligence
+Folders in Operating Systems
+Computer file systems
+Json Objects
+
+# Kinds
+
+Binary Trees - Each node can have at most, two children.
+Binary Search Trees - Are sorted in a particular way where you can order it and compare nodes. Every child node to the left of the parent node is less than the parent node in value and every child node to the right of the parent node is greater in value.
 
