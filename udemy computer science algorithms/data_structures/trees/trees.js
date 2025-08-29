@@ -34,4 +34,24 @@ class BinarySearchTree {
             }
         }
     }
+    find(value){
+        var current = this.root;
+        var exists = false;
+        if(this.root === null) return false;
+        while(exists === false){
+            if(value === current.value) exists = true;
+            if(value < current.value){
+                if(current.left === null){
+                    break;
+                }
+                current = current.left;
+            } else {
+                if(current.right === null){
+                    break;
+                } 
+                current = current.right;
+            }
+        }
+        return exists;
+    }
 }
