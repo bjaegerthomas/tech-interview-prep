@@ -32,10 +32,10 @@ Binary Search Trees - Are sorted in a particular way where you can order it and 
 
 ## Tree Traversal
 
-Breadth First traversal is working across the tree.
+Breadth First traversal is working across the tree. Every node on the same level and ever sibling node before moving to their children.
 
 Depth First Traversal is going down and then coming back up to the main node.
     In order -
     Pre order -
-    Post Order - 
+    Post order - 
 
