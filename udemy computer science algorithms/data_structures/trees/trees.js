@@ -123,7 +123,7 @@ class BinarySearchTree {
         function traverse(node){
             if(node.left) traverse(node.left);
             data.push(node.value);
-            if(node.right) traverse(node.right);
+            if(node.right) traverse(node.right); //my answer was the same as the given solution
         }
         traverse(this.root);
         return data;
