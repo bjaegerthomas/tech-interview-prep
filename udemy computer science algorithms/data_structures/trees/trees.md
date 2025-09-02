@@ -15,7 +15,7 @@ Siblings - a group of nodes with the same parent
 Leaf - is a node with no children
 Edge - connection between one node and another
 
-# Uses
+## Uses
 
 HTML DOM
 Network Routing
@@ -25,8 +25,17 @@ Folders in Operating Systems
 Computer file systems
 Json Objects
 
-# Kinds
+## Kinds
 
 Binary Trees - Each node can have at most, two children.
 Binary Search Trees - Are sorted in a particular way where you can order it and compare nodes. Every child node to the left of the parent node is less than the parent node in value and every child node to the right of the parent node is greater in value.
+
+## Tree Traversal
+
+Breadth First traversal is working across the tree.
+
+Depth First Traversal is going down and then coming back up to the main node.
+    In order -
+    Pre order -
+    Post Order - 
 
