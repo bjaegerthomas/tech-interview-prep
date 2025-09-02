@@ -37,5 +37,5 @@ Breadth First traversal is working across the tree. Every node on the same level
 Depth First traversal is visiting all nodes vertically, going down the tree before visiting sibiling nodes.
     In order -
     Pre order - We visit the node, then we look at the left side moving vertically down before moving to the right.
-    Post order - 
+    Post order - We visit all children before visiting the root.
 
