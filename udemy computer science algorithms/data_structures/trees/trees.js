@@ -98,4 +98,15 @@ class BinarySearchTree {
         }
         return data;
     }
+    DFSPre(){
+        var visited = [];
+        var current = this.root;
+        traverse(current);
+        return visited;
+    }
+    traverse(node){
+        visited.push(node.value);
+        if (node.left) this.traverse(node.left);
+        if (node.right) this.traverse(node.right);
+    }
 }
