@@ -112,7 +112,7 @@ class BinarySearchTree {
         var data = [];
         function traverse(node){
             if(node.left) traverse(node.left);
-            if(node.right) traverse(node.right);
+            if(node.right) traverse(node.right); //my answer was the same as the given solution
             data.push(node.value);
         }
         traverse(this.root);
