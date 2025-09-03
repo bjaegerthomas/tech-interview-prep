@@ -87,7 +87,13 @@ In an interview setting it may be of value to ask if "It is guaranteed that s is
             // set current = 1
         // num.push(current)
     // return num
-    
+
 ## Given Solution
 
 ## Key Takeways
+
+*UPDATE* So I didn't think about the fact that I was trying to use integers and push them into an array rather than using concat and changing my current and num variables to strings.
+
+In addition I have not factored in the fact that 3 I's in a row = 3 or 2 I's = 2, nevermind the 2 or 3 I's after a V equaling 7 and 8 respectively. There are some more math related nested conditions to take into account to get the correct answer.
+
+Lastly there are several patterns I could see just from writing the psuedo code which indicate there is some major refactoring to take into accoun to make the code less redundant and drier.
