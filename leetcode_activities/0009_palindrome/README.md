@@ -26,10 +26,13 @@ Constraints:
 
 ## Approach
 // Create a function named palindrome which accepts an integer
+    //create new variable for integer and convert to string
     // initialize variable right for right side of integer to 0
-    // for loop which runs through length of integer - 1 where i starts at x - 1 and decrements every pass
+    // for loop which runs through length of integer - 1 where i starts at x - 1 and decrements every pass as long as i
+    // is > x.length/2
         // check if right and i !==
         // if true return false
+        // increment right by 1
     // return true if the integer is a palindrome and exits the for loop
 
 ## Given Solution
