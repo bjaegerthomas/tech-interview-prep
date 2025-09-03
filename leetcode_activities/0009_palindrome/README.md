@@ -25,7 +25,7 @@ Constraints:
 -231 <= x <= 231 - 1
 
 ## Approach
-// Create a function nmed palindrome which accepts an integer
+// Create a function named palindrome which accepts an integer
     // initialize variable right for right side of integer to 0
     // for loop which runs through length of integer - 1 where i starts at x - 1 and decrements every pass
         // check if right and i !==
