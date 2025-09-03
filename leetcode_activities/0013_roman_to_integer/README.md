@@ -47,6 +47,46 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 ## Approach
 
+In an interview setting it may be of value to ask if "It is guaranteed that s is a valid roman numeral in the range [1, 3999]." means that we can assume the string will be in all capital letters or if we would need an edge case to convert them?
+
+// create a function which accepts a string "s"
+    // initialize a var num = []
+    // initialize a var current = 0
+    // move through a for loop as long as i < s.length - 1
+        // check if s[i] in string  === C
+            // check to see if the next element s[i+1] === D
+                // set current = 4
+                // increment i by 1 since we can skip the next variable as we know it is a D
+            // else if the next element === M
+                // set current = 9
+                // increment i by 1 since we can skip the next variable as we know it is a M
+            // else set current = 1
+        // check if s[i] === X
+            // check if the next element s[i+1] === L
+                // set current = 4
+                // increment i by 1 since we can skip the next variable as we know it is a L
+            // else if s[i+1] === C
+                // set current = 9
+                // increment i by 1 since we can skip the next variable as we know it is a C
+            // else set current = 1
+        // check if s[i] === I
+            // check if the next element s[i+1] === V
+                // set current = 4
+                // increment i by 1 since we can skip the next variable as we know it is a V
+            // else check if s[i+1] === X
+                // set current = 9
+                // increment i by 1 since we can skip the next variable as we know it is a X
+            // else set current = 1
+        // check if s[i] === V
+            // set current = 5
+        // check if s[i] === L
+            // set current = 5
+        // check if s[i] === D
+            // set current = 5
+        // check if s[i] === M
+            // set current = 1
+        // num.push(current)
+    // return num
 ## Given Solution
 
 ## Key Takeways
