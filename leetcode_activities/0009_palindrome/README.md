@@ -36,6 +36,50 @@ Constraints:
     // return true if the integer is a palindrome and exits the for loop
 
 ## Given Solution
+These are compliments of ChatGPT
+
+1. String Reverse Comparison (super simple, but less efficient)
+
+Convert the number to a string.
+
+Reverse the string.
+
+Compare original vs reversed.
+
+function palindrome(x) {
+  let str = x.toString();
+  return str === str.split("").reverse().join("");
+}
+
+
+✅ Very short, easy to read.
+⚠️ Slightly less efficient because of array creation and joining.
+
+2. Math-Based (no string conversion)
+
+Work with digits mathematically.
+
+Reverse the integer digit by digit.
+
+Compare original vs reversed.
+
+function palindrome(x) {
+  if (x < 0) return false; // negatives can't be palindromes
+  let original = x;
+  let reversed = 0;
+
+  while (x > 0) {
+    reversed = reversed * 10 + (x % 10); // add last digit
+    x = Math.floor(x / 10); // remove last digit
+  }
+
+  return original === reversed;
+}
+
+
+✅ Doesn’t rely on string conversion, just math.
+✅ Often asked in interviews because it shows number manipulation skills.
+
 
 ## Key Takeways
 *UPDATE* After the first pass I noticed a couple of things. 1- I forgot to discuss the fact that the right variable also needs to increment by 1 each time and 2- my solution will return true each time because of the logic in my code.
