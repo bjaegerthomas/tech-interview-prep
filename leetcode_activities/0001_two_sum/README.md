@@ -36,3 +36,4 @@ Nested inside that for loop will be a second for loop with a k counter which wil
 ## Given Solution
 
 ## Key Takeways
+My solution works but it would be good to think about a refactoring that could acheive something better than a O(n2) time complexity with the nested for loops.
