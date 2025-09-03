@@ -49,7 +49,7 @@ It is guaranteed that s is a valid roman numeral in the range [1, 3999].
 
 In an interview setting it may be of value to ask if "It is guaranteed that s is a valid roman numeral in the range [1, 3999]." means that we can assume the string will be in all capital letters or if we would need an edge case to convert them?
 
-// create a function which accepts a string "s"
+// create a function which accepts a string "s" and converts it from a roman numeral into an integer
     // initialize a var num = []
     // initialize a var current = 0
     // move through a for loop as long as i < s.length - 1
@@ -87,6 +87,7 @@ In an interview setting it may be of value to ask if "It is guaranteed that s is
             // set current = 1
         // num.push(current)
     // return num
+    
 ## Given Solution
 
 ## Key Takeways
