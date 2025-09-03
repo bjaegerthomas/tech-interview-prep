@@ -36,3 +36,4 @@ Constraints:
 
 ## Key Takeways
 *UPDATE* After the first pass I noticed a couple of things. 1- I forgot to discuss the fact that the right variable also needs to increment by 1 each time and 2- my solution will return true each time because of the logic in my code.
+I also need to convert the integer into a string so I can use the indicies to compare elements within the integer. In addition, I need to use right as an indicies marker where as right now I am using it as just a value.
