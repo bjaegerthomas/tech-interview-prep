@@ -49,7 +49,7 @@ function romanToInt(s) {
             // check if the next element s[i+1] === "I"
             if (s[i+1] === "I") {
                 // check if s[i+1] === "I"
-                if (s[i+1] === "I") {
+                if (s[i+2] === "I") {
                     // set current = 3
                     current = 3;
                     // increment forward by two since we know the next two numerals are both I
