@@ -137,6 +137,45 @@ Attempt 2: (converting to integer version)
 
 ## Given Solution
 
+My solution works but this a solution provided by chatgpt
+
+function romanToInt(s) {
+  const values = {
+    I: 1,
+    V: 5,
+    X: 10,
+    L: 50,
+    C: 100,
+    D: 500,
+    M: 1000
+  };
+
+  let num = 0;
+
+  for (let i = 0; i < s.length; i++) {
+    let current = values[s[i]];
+    let next = values[s[i + 1]];
+
+    // If current < next, subtract instead of add
+    if (next && current < next) {
+      num -= current;
+    } else {
+      num += current;
+    }
+  }
+
+  return num;
+}
+This way:
+
+"III" works because you just add 1 + 1 + 1.
+
+"IV" works because you do -1 + 5 = 4.
+
+"IX" works because you do -1 + 10 = 9.
+
+"MCMXCIV" works because the subtraction rule covers everything.
+
 ## Key Takeways
 
 *UPDATE* So I didn't think about the fact that I was trying to use integers and push them into an array rather than using concat and changing my current and num variables to strings.
@@ -146,3 +185,5 @@ In addition I have not factored in the fact that 3 I's in a row = 3 or 2 I's = 2
 Lastly there are several patterns I could see just from writing the psuedo code which indicate there is some major refactoring to take into accoun to make the code less redundant and drier.
 
 *UPDATE* So this is why you really read the instructions carefully. The return type which is expected, is an integer. I am trying to change everything into a string
+
+*UPDATE* I needed to do some tweaking and remember to use else if statements so that each code block only runs once and doesn't overwrite my current value before adding it to my total. I could probably update my variable name num to total to be more explicit. I also need to look at the solution given by chatgpt which uses some mathematic principles for a drier and tighter looking code so I can understand why it works and be more prepared for similar mathematical solutions to other problems.
