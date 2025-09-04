@@ -45,7 +45,7 @@ function romanToInt(s) {
             else current = 10;
         }
         // check if s[i] === "I"
-        if (s[i] === "I") {
+        else if (s[i] === "I") {
             // check if the next element s[i+1] === "V"
             if (s[i+1] === "V") {
                 // set current = 4
@@ -65,16 +65,16 @@ function romanToInt(s) {
         }
         // check if s[i] === "V"
             // set current = 5
-        if (s[i] === "V") current = 5;
+        else if (s[i] === "V") current = 5;
         // check if s[i] === "L"
             // set current = 50
-        if (s[i] === "L") current = 50;
+        else if (s[i] === "L") current = 50;
         // check if s[i] === "D"
             // set current = 500
-        if (s[i] === "D") current = 500;
+        else if (s[i] === "D") current = 500;
         // check if s[i] === "M"
             // set current = 1000
-        if (s[i] === "M") current = 1000;
+        else if (s[i] === "M") current = 1000;
         // num = num + current
         num += current;
     }    
