@@ -26,7 +26,7 @@ function romanToInt(s) {
             else current = 100;
         }
         // check if s[i] === "X"
-        if (s[i] === "X") {
+        else if (s[i] === "X") {
             // check if the next element s[i+1] === "L"
             if (s[i+1] === "L") {
                 // set current = 40
