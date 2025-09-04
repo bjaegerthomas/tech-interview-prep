@@ -85,7 +85,7 @@ In an interview setting it may be of value to ask if "It is guaranteed that s is
             // set current = 5
         // check if s[i] === M
             // set current = 1
-        // num.push(current)
+        // num = num.push(current)
     // return num
 
 ## Given Solution
@@ -97,3 +97,5 @@ In an interview setting it may be of value to ask if "It is guaranteed that s is
 In addition I have not factored in the fact that 3 I's in a row = 3 or 2 I's = 2, nevermind the 2 or 3 I's after a V equaling 7 and 8 respectively. There are some more math related nested conditions to take into account to get the correct answer.
 
 Lastly there are several patterns I could see just from writing the psuedo code which indicate there is some major refactoring to take into accoun to make the code less redundant and drier.
+
+*UPDATE* So this is why you really read the instructions carefully. The return type which is expected, is an integer. I am trying to change everything into a string

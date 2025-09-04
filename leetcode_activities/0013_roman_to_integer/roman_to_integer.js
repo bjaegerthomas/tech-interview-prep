@@ -76,7 +76,7 @@ function romanToInt(s) {
             // set current = 1
         if (s[i] === "M") current = "1";
         // num.push(current)
-        num.concat(current);
+        num = num.concat(current);
     }
     // return num
     return num;
