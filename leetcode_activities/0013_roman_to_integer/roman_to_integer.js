@@ -5,7 +5,7 @@ function romanToInt(s) {
     // initialize a var current = 0
     let current = 0;
     // move through a for loop as long as i < s.length
-    for (let i = 0; i <= s.length; i++) {
+    for (let i = 0; i < s.length; i++) {
         // check if s[i] in string  === "C"
         if (s[i] === "C") {
             // check to see if the next element s[i+1] === "D"
@@ -46,22 +46,8 @@ function romanToInt(s) {
         }
         // check if s[i] === "I"
         if (s[i] === "I") {
-            // check if the next element s[i+1] === "I"
-            if (s[i+1] === "I") {
-                // check if s[i+1] === "I"
-                if (s[i+2] === "I") {
-                    // set current = 3
-                    current = 3;
-                    // increment forward by two since we know the next two numerals are both I
-                    i = i + 2;
-                }
-                // set current = 2
-                current = 2;
-                // increment by one since we know the next numeral is an I
-                i++;
-            }
-            // else check if s[i+1] === "V"
-            else if (s[i+1] === "V") {
+            // check if the next element s[i+1] === "V"
+            if (s[i+1] === "V") {
                 // set current = 4
                 current = 4;
                 // increment i by 1 since we can skip the next variable as we know it is a V
