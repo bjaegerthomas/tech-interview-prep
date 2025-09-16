@@ -49,6 +49,16 @@ Constraints:
 s consists of parentheses only '()[]{}'.
 
 ## Approach
+//define function isValid(s) which accepts a string
+    //define const opp = { "(":")", "{":"}", "[":"]", ")":"(", "}":"{", "]":"["})}
+    //define left = Math.floor(s.length/2)
+    //let right = left + 1
+    //while (left >= 0 && right <= s.length)
+        //if (s[right] != opp[s[left]])
+            //return false
+        //left--
+        //right++
+    //return true
 
 ## Given Solution
 
