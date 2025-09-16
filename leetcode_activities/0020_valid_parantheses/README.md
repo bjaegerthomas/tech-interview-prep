@@ -62,6 +62,43 @@ s consists of parentheses only '()[]{}'.
 
 ## Given Solution
 
+Solution 1 given by chat gpt:
+
+// Define a function that accepts a string of brackets
+function isValid(s) {
+    // Map of opening to closing brackets
+    const pairs = {
+        "(": ")",
+        "{": "}",
+        "[": "]"
+    };
+
+    // Stack to keep track of opening brackets
+    const stack = [];
+
+    // Loop through each character
+    for (let char of s) {
+        // If it's an opening bracket, push to stack
+        if (pairs[char]) {
+            stack.push(char);
+        } 
+        // If it's a closing bracket
+        else {
+            // Pop from stack
+            const last = stack.pop();
+            // Check if it matches
+            if (pairs[last] !== char) {
+                return false;
+            }
+        }
+    }
+
+    // At the end, stack must be empty
+    return stack.length === 0;
+}
+
 ## Key Takeways
 *UPDATE* I have run it and it failed most test cases. Seems I'm having issues with my indexing. When I subtract 1 from the intial instantiation of the left integer I passed 4 of the 5 test cases except for the second one. I think the appraoch is solid, just coming up against the indexing issue.
+
+*UPDATE* My solution was only taking into account a symetrical string as opposed to properly open and closed sets of brackets or parantheses. The use of the stack aloows us to keep track of all of the opening brackets which haven't been satisfied yet by finding their corresponding closing bracket.
 
