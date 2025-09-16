@@ -24,6 +24,17 @@ Constraints:
 strs[i] consists of only lowercase English letters if it is non-empty.
 
 ## Approach
+//define function which accepts an array of strings
+    //instantiate variable currPre = ""
+    //instantiate variable longPre = ""
+    //instantiate var index = 0
+    //loop through strs array as long as i < strs.length
+        //if ((strs[i])[index] == (strs[i+1])[index])
+            //then currPre = currPre.concat((strs[i])[i])
+            //index++
+        //if currPre/length >= longPre.length
+            //then longPre = currPre
+    //return longPre
 
 ## Given Solution
 
