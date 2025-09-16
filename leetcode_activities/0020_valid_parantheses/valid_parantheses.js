@@ -10,7 +10,7 @@ function isValid(s){
         "]":"["
     }
     //define left = Math.floor(s.length/2)
-    let left = Math.floor(s.length/2);
+    let left = Math.floor(s.length/2) - 1;
     //let right = left + 1
     let right = left + 1;
     //while (left >= 0 && right <= s.length)

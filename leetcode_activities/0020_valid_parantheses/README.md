@@ -63,4 +63,5 @@ s consists of parentheses only '()[]{}'.
 ## Given Solution
 
 ## Key Takeways
+*UPDATE* I have run it and it failed most test cases. Seems I'm having issues with my indexing. When I subtract 1 from the intial instantiation of the left integer I passed 4 of the 5 test cases except for the second one. I think the appraoch is solid, just coming up against the indexing issue.
 
