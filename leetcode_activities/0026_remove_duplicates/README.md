@@ -55,6 +55,7 @@ nums is sorted in non-decreasing order.
     //return k
 
 ## Given Solution
+
 var removeDuplicates = function(nums) {
     let i = 1;
 
@@ -68,6 +69,23 @@ var removeDuplicates = function(nums) {
     return i;    
 };
 
+here is my solution from earlier this month:
+
+var removeDuplicates = function(nums) {
+    let k = 1;
+
+    for (let i = 1; i < nums.length; i++) {
+        if (nums[i] !== nums[k - 1]) {
+            nums[k] = nums[i];
+            k++;
+        }
+    }
+
+    return k;  
+};
+
 ## Key Takeways
-There was a more eloquent solution which I had before and need to pull up from past submissions
+There was a more eloquent solution which I had before and need to pull up from past submissions.
+
+*UPDATE* I guess it wasn't more eloquent, it's the same but for what ever reason, the old submission beat out 57.40% of submissions whereas the one i just submitted beat out only 26.13%. I wonder if it has anything to do with the snippet needing to convert the i variable into a k variable for it's own computational output?
 
