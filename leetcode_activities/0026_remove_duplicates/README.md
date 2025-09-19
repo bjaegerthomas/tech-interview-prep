@@ -46,6 +46,13 @@ Constraints:
 nums is sorted in non-decreasing order.
 
 ## Approach
+//define function removeDuplicates(nums)
+    //let k = 0 counter for unique elements
+    //loop through array for (let i = 1; i < nums.length; i++)
+        //if (nums[k] !== nums[i])
+            //let k = i
+        //else nums.slice(i)
+    //return k
 
 ## Given Solution
 
