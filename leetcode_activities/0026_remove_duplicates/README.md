@@ -55,7 +55,19 @@ nums is sorted in non-decreasing order.
     //return k
 
 ## Given Solution
+var removeDuplicates = function(nums) {
+    let i = 1;
+
+    for (let j = 1; j < nums.length; j++) {
+        if (nums[j] !== nums[i - 1]) {
+            nums[i] = nums[j];
+            i++;
+        }
+    }
+
+    return i;    
+};
 
 ## Key Takeways
-
+There was a more eloquent solution which I had before and need to pull up from past submissions
 
