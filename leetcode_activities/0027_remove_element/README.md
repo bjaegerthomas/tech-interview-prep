@@ -66,6 +66,22 @@ Constraints:
         //nums[k] = nums[i] let the current element equal the next element
     //return k
 
+## Given Solution
+
+var removeElement = function(nums, val) {
+    let k = 0;
+
+    for (let i = 0; i < nums.length; i++) {
+        if (nums[i] !== val) {
+            nums[k] = nums[i];
+            k++;
+        }
+    }
+
+    return k;    
+};
+
 ## Key Takeways
+I can see how this eliminates a step and elegantly keeps the k counter behind and allows you to replace the next element without using a - equation operator
 
 
