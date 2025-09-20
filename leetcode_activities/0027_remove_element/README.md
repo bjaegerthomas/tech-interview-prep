@@ -58,6 +58,14 @@ Constraints:
         //nums[i] = nums[i+1] let the current element equal the next element
     //return k
 
+*UPDATE*
+//let k = 0 counter for elements left over in array which don't equal value
+    //for (let i = 1; i < nums.length; i++) loop through all elements in nums
+        //if (nums[k] !== val) if the element at the current count index isn't equal to the value inputed
+        //k++ increase the counter by 1
+        //nums[k] = nums[i] let the current element equal the next element
+    //return k
+
 ## Key Takeways
 
 

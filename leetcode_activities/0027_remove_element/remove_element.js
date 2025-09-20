@@ -3,12 +3,12 @@ function removeElement(nums, val) {
     //let k = 0 counter for elements left over in array which don't equal value
     let k = 0;
     //for (let i = 1; i < nums.length; i++) loop through all elements in nums
-    for (let i = 1; i < nums.length - 1; i++) {
-        //if (nums[i-1] !== val) if the previous element isn't equal to the value inputed
+    for (let i = 1; i < nums.length; i++) {
+        //if (nums[k] !== val) if the element at the current count index isn't equal to the value inputed
         //k++ increase the counter by 1
-        if (nums[i-1] !== val) k++;
-        //nums[i] = nums[i+1] let the current element equal the next element
-        nums[i] = nums[i+1];
+        if (nums[k] !== val) k++;
+        //nums[k] = nums[i] let the current element equal the next element
+        nums[k] = nums[i];
     }
     //return k
     return k;
