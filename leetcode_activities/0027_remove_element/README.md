@@ -1,6 +1,7 @@
 # Remove Element
 
 ## Task Overview
+
 Given an integer array nums and an integer val, remove all occurrences of val in nums in-place. The order of the elements may be changed. Then return the number of elements in nums which are not equal to val.
 
 Consider the number of elements in nums which are not equal to val be k, to get accepted, you need to do the following things:
@@ -49,6 +50,13 @@ Constraints:
 0 <= val <= 100
 
 ## Approach
+// define function which accepts an array nums and a value to remove from the array where ever it occurs
+    //let k = 0 counter for elements left over in array which don't equal value
+    //for (let i = 1; i < nums.length; i++) loop through all elements in nums
+        //if (nums[i-1] !== val) if the previous element isn't equal to the value inputed
+            //k++ increase the counter by 1
+        //nums[i] = nums[i+1] let the current element equal the next element
+    //return k
 
 ## Key Takeways
 
