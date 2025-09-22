@@ -31,8 +31,22 @@ haystack and needle consist of only lowercase English characters.
     //return count
 
 ## Given Solution
+var strStr = function(haystack, needle) {
+    if (haystack.length < needle.length) {
+        return -1;
+    }
+    
+    for (let i = 0; i <= haystack.length - needle.length; i++) {
+        if (haystack.substring(i, i + needle.length) === needle) {
+            return i;
+        }
+    }
+    
+    return -1;    
+};
 
 ## Key Takeways
+Our solutions are essentially the same where as they do a check right up front to see if needle is larger than the haystack which negates the need to do any other computations
 
 
 
