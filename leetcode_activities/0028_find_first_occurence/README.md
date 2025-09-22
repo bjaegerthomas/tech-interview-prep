@@ -22,6 +22,13 @@ Constraints:
 haystack and needle consist of only lowercase English characters.
 
 ## Approach
+//define function which accepts two strings needle and haystack function findFirstOccur(haystack, needle)
+    //determine length of needle and set in variable let needleLen = needle.length - 1
+    //set counter let count = 0
+    //loop through haystack while (needle !== haystack.substring(count, needleLen))
+        //count++
+    //if (count = haystack.length) count = -1
+    //return count
 
 ## Given Solution
 
