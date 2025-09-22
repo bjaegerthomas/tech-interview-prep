@@ -29,6 +29,13 @@ nums contains distinct values sorted in ascending order.
 -104 <= target <= 104
 
 ## Approach
+//write function which accepts an array of sorted, non-repeating integers and a target value function searchInsert(nums, target)
+//create an index counter let index = 0
+//loop through array while (target !== nums[index] && target !> nums[index] && nums[index])
+    //index++
+//return index
+
+*NOTE* I know this first attempt is linear and not using O log n time complexity like it asks for but i needed to at least get it out of my head first
 
 ## Given Solution
 
