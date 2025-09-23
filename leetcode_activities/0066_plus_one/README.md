@@ -6,8 +6,6 @@ You are given a large integer represented as an integer array digits, where each
 
 Increment the large integer by one and return the resulting array of digits.
 
- 
-
 Example 1:
 
 Input: digits = [1,2,3]
@@ -38,6 +36,14 @@ Constraints:
 digits does not contain any leading 0's.
 
 ## Approach
+//create function which takes in an array of integers function plusOne(digits)
+    //for (let i = digits.length - 1; i >= 0; i--)
+        //if (digits[i] != 9)
+            //digits[i] = digits[i] + 1;
+            //return digits
+        //else digits[i] = 0
+    //return digits
+            
 
 ## Given Solution
 
