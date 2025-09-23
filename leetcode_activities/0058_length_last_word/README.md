@@ -55,8 +55,23 @@ There will be at least one word in s.
 //return count
 
 ## Given Solution
+var lengthOfLastWord = function(s) {
+    let end = s.length - 1;
+
+    while (end >= 0 && s[end] === ' ') {
+        end--;
+    }
+
+    let start = end;
+    while (start >= 0 && s[start] !== ' ') {
+        start--;
+    }
+
+    return end - start;    
+};
 
 ## Key Takeways
+I'm not sure why the extra calculations are made here rather than just working backwards from the end of the string like I did.
 
 
 
