@@ -30,11 +30,12 @@ function lengthOfLastWord(s) {
     //define count variable to count characters in last word of overall string let count = 0
     let count = 0;
     //loop through string backwards for (let i = s.length - 1; i > 0; i--)
-    for (let i = s.length - 1; i > 0; i--) {
+    for (let i = s.length - 1; i >= 0; i--) {
         //check if current element is a space if (s[i] != " ")
             //increase count count++
         if (s[i] != " ") count++;
         //else if (count > 0) return
         else if (count > 0) return count;
     }
+    return count;
 }
