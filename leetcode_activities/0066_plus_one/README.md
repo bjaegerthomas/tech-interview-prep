@@ -43,11 +43,36 @@ digits does not contain any leading 0's.
             //return digits
         //else digits[i] = 0
     //return digits
-            
+
+*UPDATED* After tweaking for the event you have the last digit (aka the first i'th digit) as a 9 or all of the digits as a 9 for that matter, here is the updated code approach below
+
+//create function which takes in an array of integers function plusOne(digits)
+    //for (let i = digits.length - 1; i >= 0; i--)
+        //if (digits[i] != 9)
+            //digits[i] = digits[i] + 1;
+            //return digits
+        //digits[i] = 0
+    //digits.unshift(1) if all digits are a 9 we need to add an additional i'th place at the beginning of the array
+    //return digits
 
 ## Given Solution
 
+var plusOne = function(digits) {
+    for (let i = digits.length - 1; i >= 0; i--) {
+        if (digits[i] + 1 !== 10) {
+            digits[i] += 1;
+            return digits;
+        }
+        digits[i] = 0;
+        if (i === 0) {
+            digits.unshift(1);
+            return digits;
+        }
+    }    
+};
+
 ## Key Takeways
+After consulting with gpt to tweak my original solution and solving for the event there are only 9's in the original array I realized you don't need to do the conditional check at the bootom to see if i = 0 before unshifting(1). You can merely assume that if the loop wasn't exited early, then the only digit(s) in the original array is a/are 9/'s.
 
 
 
