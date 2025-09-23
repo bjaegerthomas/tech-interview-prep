@@ -44,6 +44,16 @@ There will be at least one word in s.
         //currWord = ""
 // return longWord.length
 
+*NOTE* And this is why it behooves you to read all of the instructions carefully and thoroughly before starting in. I thought I was solving for the longest substring in the original string but instead I am counting the number of non-" " characters in the last word of a string. Time to reconfigure
+
+//define function which accepts a string function lengthOfLastWord(s)
+//define count variable to count characters in last word of overall string let count = 0
+//loop through string backwards for (let i = s.length; i > 0; i--)
+    //check if current element is a space if (s[i] != " ")
+        //increase count count++
+    //else if (count > 0) return
+//return count
+
 ## Given Solution
 
 ## Key Takeways
