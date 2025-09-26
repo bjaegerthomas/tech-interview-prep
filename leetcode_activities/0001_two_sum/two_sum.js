@@ -19,9 +19,9 @@ function twoSum (nums, target) {
         //if (numsObj.has(compliment) && compliment != nums[i]) check to see if the new object has the complimentary element and it's not equal to the current element in the original array
         if (numsObj.has(compliment) && compliment != nums[i]) {
             //return numsObj.get(compliment), i return the compliment's key value pair (it's indexes) and the current element's counter
-            return numsObj.get(compliment), i;
+            return [numsObj.get(compliment), i];
         }
         //numsObj.set(compliment, i) if the compliment doesn't already exist, then set it in the new obj as the key and make it's value pair = to i
-        numsObj.set(compliment, i);
+        numsObj.set(nums[i], i);
     }
 }
