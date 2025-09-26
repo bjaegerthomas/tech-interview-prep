@@ -10,6 +10,8 @@
 
 //function twoSum (nums, target) define function which accepts an array of integers and a target value which will be the sum of two elements within the array
 function twoSum (nums, target) {
+    //add condition for only two elements in nums array. It has to return 0 and 1 because we were garaunteed that at least one set of elements would add up to the target value
+    if (nums.length == 2) return [0, 1];
     //let numsObj = new Map() create object to search for the complimenatry value as a key and map it's cooresponding indexes to it
     let numsObj = new Map();
     //for (let i = 0, i < nums.length; i++) loop through elements in nums
