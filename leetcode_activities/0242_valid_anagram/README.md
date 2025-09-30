@@ -24,10 +24,18 @@ Constraints:
 s and t consist of lowercase English letters.
 
 ## Approach
+
+Brute Force:
+
 //define function that accepts two strings function validAnagram(s, t)
-//sort s let sortedS = s.plit("").sort().join("")
-//sort t let sortedT = t.plit("").sort().join("")
-//compare the two sorted strings and return the result return sortedS === sortedT
+    //sort s let sortedS = s.plit("").sort().join("")
+    //sort t let sortedT = t.plit("").sort().join("")
+    //compare the two sorted strings and return the result return sortedS === sortedT
+
+Two Pointer:
+
+//define function that accepts two strings function validAnagram(s, t)
+
 
 ## Given Solution
 
