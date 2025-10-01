@@ -1,4 +1,4 @@
-/* Brute Force
+// Brute Force
 
 //define function which accepts an array nums - function containsDuplicate(nums)
 function containsDuplicate(nums) {
@@ -15,8 +15,6 @@ function containsDuplicate(nums) {
     return false;
 }
 
-*/
-
 // Hash map
 
 //define function which accepts an array nums - function containsDuplicate()
@@ -32,4 +30,9 @@ function containsDuplicate(nums) {
     }
     //if you make it through the loop without finding any duplicate numbers return false - return false
     return false;
+}
+
+// Shortest version given by ChatGpt - Set Comparison
+function containsDuplicate(nums) {
+    return new Set(nums).size !== nums.length;
 }
