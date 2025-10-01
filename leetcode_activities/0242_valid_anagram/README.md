@@ -48,5 +48,27 @@ s and t consist of lowercase English letters.
 
 ## Given Solution
 
+var isAnagram = function(s, t) {
+    if (s.length !== t.length) {
+        return false;
+    }
+
+    const counter = new Map();
+
+    for (let char of s) {
+        counter.set(char, (counter.get(char) || 0) + 1);
+    }
+
+    for (let char of t) {
+        if (!counter.has(char) || counter.get(char) === 0) {
+            return false;
+        }
+        counter.set(char, counter.get(char) - 1);
+    }
+
+    return true;    
+};
+
 ## Key Takeways
+I thought about using this hashmap approach, and it's cleaner than mine because he essentially only creates one hashmap for s and then compares it to the characters in t. If they don't exist or if counter for that specific charcter in the s hashmap has reached 0, then you return false otherwise you keep subtracting one from the counter for that specfic character after it is found in the t string.
 
