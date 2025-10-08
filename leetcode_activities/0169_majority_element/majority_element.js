@@ -1,4 +1,4 @@
-function majorityElement(nums) {
+/* function majorityElement(nums) {
 
     const count = {};
 
@@ -20,11 +20,11 @@ function majorityElement(nums) {
         }
     }
     return maxKey;
-};
+}; 
     
 
 let nums = [4,5,2,3,4,2,5,6,6,6,3,3,4,4,4,4,5,2,1,5];
-console.log (majorityElement(nums));
+console.log (majorityElement(nums)); */
 
 /* Low level breakdown from chatgpt and it's solution given the same problem
 
@@ -54,7 +54,7 @@ console.log (majorityElement(nums));
 
 */
  
-function freq(nums) {
+/* function freq(nums) {
     // similar to the frequency counter but transitioning it to a vote
     let count = 0;
     let candidate = null;
@@ -67,7 +67,7 @@ function freq(nums) {
     }
 
     return candidate;
-};
+}; */
 
 /*
 
@@ -93,3 +93,27 @@ function pluralityElement(nums) {
 }
     
 */
+
+//define function which accepts an array of integers nums - function majorityElement(nums)
+function majorityElement(nums) {
+    //define hashmap - let numsMap = new Map ()
+    let numsMap = new Map ();
+    //define counter to keep track of element with largest number of occurences - let counter = 0
+    let counter = 0;
+    //define majority to be the lement with the most occurences - let majority = 0
+    let majority = 0;
+    //loop through array and build numsMap - for (let num in nums)
+    for (let num in nums) {
+        //check if key exists, if it doesn't exist, create it and establish its value as 0 and add 1 or simply add 1 to the key as it already exists - numsMap.set(num, (numsMap.get(num) ?? 0) + 1)
+        numsMap.set(num, (numsMap.get(num) ?? 0) + 1);
+        //check if current key's value is greater than counter - if (numsMap.get(num) > counter)
+        if (numsMap.get(num) > counter) {
+            //if it is greater set the counter to the cureent highest number of occurences - counter = numsMap.get(num)
+            counter = numsMap.get(num);
+            //and also update majority to the current num - majority = num
+            majority = num;
+        }
+    }
+    //return majority
+    return majority;
+}
