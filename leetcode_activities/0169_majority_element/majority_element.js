@@ -102,8 +102,8 @@ function majorityElement(nums) {
     let counter = 0;
     //define majority to be the lement with the most occurences - let majority = 0
     let majority = 0;
-    //loop through array and build numsMap - for (let num in nums)
-    for (let num in nums) {
+    //loop through array and build numsMap - for (let num of nums)
+    for (let num of nums) {
         //check if key exists, if it doesn't exist, create it and establish its value as 0 and add 1 or simply add 1 to the key as it already exists - numsMap.set(num, (numsMap.get(num) ?? 0) + 1)
         numsMap.set(num, (numsMap.get(num) ?? 0) + 1);
         //check if current key's value is greater than counter - if (numsMap.get(num) > counter)

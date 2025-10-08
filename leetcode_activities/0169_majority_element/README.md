@@ -55,7 +55,7 @@ n == nums.length
     //define hashmap - let numsMap = new Map ()
     //define counter to keep track of element with largest number of occurences - let counter = 0
     //define majority to be the lement with the most occurences - let majority = 0
-    //loop through array and build numsMap - for (let num in nums)
+    //loop through array and build numsMap - for (let num of nums)
         //check if key exists, if it doesn't exist, create it and establish its value as 0 and add 1 or simply add 1 to the key as it already exists - numsMap.set(num, (numsMap.get(num) ?? 0) + 1)
         //check if current key's value is greater than counter - if (numsMap.get(num) > counter)
             //if it is greater set the counter to the cureent highest number of occurences - counter = numsMap.get(num)
