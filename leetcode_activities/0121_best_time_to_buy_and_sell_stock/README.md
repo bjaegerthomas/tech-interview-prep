@@ -42,6 +42,21 @@ Brute Force:
                 //if it is greater let the maximum profit = curre profit - maxP = currP
     //return the maximum profit - return maxP
 
+Two Pointer:
+
+//define function which accepts an array prices - function maxProfit(prices)
+    //define left window: let left = 0
+    //define maximum profit: let maxP = 0
+    //loop through the array and define right window: for (let right = 1; right < price.length; right++)
+        //define current profit: let currP = prices[right] - prices[left]
+        //check if current profit is greater than maximum profit: if (currP > maxP)
+            //let the maximum profit = the current profit: maxP = currP
+            //increase the left window: left++
+        //if current profit is not greater than max profit: else
+            //replace the right value with the left value: prices[right] = prices[left]
+    //return maximum profit: return maxP
+
+
 # Given Solution
 
 # Thoughts
