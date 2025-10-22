@@ -1,5 +1,7 @@
 //define function which accepts a string s: function validPalindrome(s)
 function validPalindrome(s) {
+    //split string into array: s = s.split("")
+    s = s.split("");
     //define left window: let left = 0
     let left = 0;
     //define right window: let right = s.length

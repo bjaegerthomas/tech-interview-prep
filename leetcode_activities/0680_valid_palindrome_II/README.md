@@ -27,6 +27,7 @@ s consists of lowercase English letters.
 # Approach
 
 //define function which accepts a string s: function validPalindrome(s)
+    //split string into array: s = s.split("")
     //define left window: let left = 0
     //define right window: let right = s.length
     //define counter: let noMatch = 0
