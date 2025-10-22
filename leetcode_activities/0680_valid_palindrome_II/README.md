@@ -26,6 +26,21 @@ s consists of lowercase English letters.
 
 # Approach
 
+//define function which accepts a string s: function validPalindrome(s)
+    //define left window: let left = 0
+    //define right window: let right = s.length
+    //define counter: let noMatch = 0
+    //loop through the string: while (left < right)
+        //check to see that characters on both ends of s are identical: if (s[left] !== s[right])
+            //increment noMatch: noMatch++
+            //check if there have been more than one non-matching characters: if (noMatch > 1) return false
+            //check to see if the next value matches: if (s[left] !== s[right-1])
+                //remove the left character: s.splice(left, 1)
+            //otherwise remove the right character: else s.splice(right, 1)
+        //increment left
+        //decrement right
+    //if you make it out of the loop then there was only one non-matching character and you can return true: return true 
+
 # Given Solution
 
 # Thoughts
