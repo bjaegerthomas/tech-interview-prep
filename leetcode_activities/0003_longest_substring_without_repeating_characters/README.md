@@ -29,6 +29,19 @@ s consists of English letters, digits, symbols and spaces.
 
 ## Approach
 
+//define function which accepts a string s: function nonRepeatSubstring(s)
+    //define left window: let left = 0
+    //define maximum string length: let maxSub = 0
+    //define current substring: let currSub = ""
+    //loop through string: for (let right = 0; right < s.length; right++)
+        //update currSub: currSub += s[right]
+        //convert currSub to a set: let currSubSet = new Set (currSub)
+        //check to see if size and length are equal: if (currSubSet.size !== currSub.length)
+            //move left window to the right: left = right
+            //reset the current substring: currSub = ""
+        //update the maximum substring length: maxSub++
+    //return the maximum substing length: return maxSub
+
 ## Given Solution
 
 ## Thoughts
