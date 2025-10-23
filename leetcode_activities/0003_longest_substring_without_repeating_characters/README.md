@@ -44,6 +44,29 @@ s consists of English letters, digits, symbols and spaces.
 
 ## Given Solution
 
+function nonRepeatSubstring(s) {
+  let left = 0;
+  let maxSub = 0;
+  let seen = new Set();
+
+  for (let right = 0; right < s.length; right++) {
+    // if we hit a duplicate, move the left pointer
+    while (seen.has(s[right])) {
+      seen.delete(s[left]);
+      left++;
+    }
+    // add current character
+    seen.add(s[right]);
+    // update max length
+    maxSub = Math.max(maxSub, right - left + 1);
+  }
+
+  return maxSub;
+}
+
+
 ## Thoughts
+
+I wasn't taking into account the possibility of the next character within my currSub being the starting point for a new sub string by making my left pointer auto update to my right. By using the has, delete, and add helper methods as well as Math.max I can still use my logic but do so correctly and more elegantly.
 
 
