@@ -19,8 +19,8 @@ function nonRepeatSubstring(s) {
             //reset the current substring: currSub = ""
             currSub = "";
         }
-        //update the maximum substring length: maxSub++
-        maxSub++;
+        //update the maximum substring length: if (currSub.length > maxSub) maxSub = currSub.length
+        if (currSub.length > maxSub) maxSub = currSub.length;
     }
     //return the maximum substing length: return maxSub
     return maxSub;
