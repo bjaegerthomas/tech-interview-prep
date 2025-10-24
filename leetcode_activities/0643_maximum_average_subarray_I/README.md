@@ -41,4 +41,18 @@ n == nums.length
 
 # Given Solution
 
+var findMaxAverage = function(nums, k) {
+    let sum = 0;
+    for (let i = 0; i < k; i++) {
+        sum += nums[i];
+    }
+    let maxSum = sum;
+    for (let i = k; i < nums.length; i++) {
+        sum += nums[i] - nums[i - k];
+        maxSum = Math.max(maxSum, sum);
+    }
+    return maxSum / k;
+};
+
 # Thoughts
+This makes sense. You are essentially getting the very first sum, and then from there you are getting the next sum, sliding the window forward, subtracting the value from the beginning of the window and adding the new value at the end of the window. Then determing the largest sum and finally dividing that by the entered value k.
