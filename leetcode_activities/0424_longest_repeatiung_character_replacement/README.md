@@ -72,4 +72,4 @@ var characterReplacement = function(s, k) {
 
 # Thoughts
 
-I think this approximates most closely what i was trying to fo without using a hash table. I didn't think to use ascii values.
+I think this approximates most closely what I was trying to do without using a hash table. I didn't think to use ascii values.
