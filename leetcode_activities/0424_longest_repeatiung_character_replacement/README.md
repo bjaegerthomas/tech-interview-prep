@@ -47,4 +47,29 @@ s consists of only uppercase English letters.
         
 # Given Solution
 
+var characterReplacement = function(s, k) {
+    let ans = 0;
+    let n = s.length;
+    for (let c = 65; c <= 90; c++) { // ASCII values for 'A' to 'Z'
+        let i = 0, j = 0, replaced = 0;
+        while (j < n) {
+            if (s[j] === String.fromCharCode(c)) {
+                j++;
+            } else if (replaced < k) {
+                j++;
+                replaced++;
+            } else if (s[i] === String.fromCharCode(c)) {
+                i++;
+            } else {
+                i++;
+                replaced--;
+            }
+            ans = Math.max(ans, j - i);
+        }
+    }
+    return ans;
+};
+
 # Thoughts
+
+I think this approximates most closely what i was trying to fo without using a hash table. I didn't think to use ascii values.
