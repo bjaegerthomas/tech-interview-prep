@@ -46,7 +46,7 @@ s consists of only uppercase English letters.
     //return the longest substring: return long
         
 # Given Solution
-
+```javascript
 var characterReplacement = function(s, k) {
     let ans = 0;
     let n = s.length;
@@ -69,8 +69,9 @@ var characterReplacement = function(s, k) {
     }
     return ans;
 };
+```
 
-'''
+```javascript
 var characterReplacement = function(s, k) {
     let freqs = {};
     let res = 0, i = 0, maxFreq = 0;
@@ -89,7 +90,7 @@ var characterReplacement = function(s, k) {
 
     return res;
 };
-'''
+```
 
 # Thoughts
 
