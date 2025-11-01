@@ -35,6 +35,18 @@ s and t consist of uppercase and lowercase English letters.
 
 # Approach
 
+//define a function which accepts two strings: function minWinSub(s, t)
+    //define length of s: let m = s.length
+    //define length of t: let n = t.length
+    //define current substring length: let currSubLen = 0
+    //define maximum substring length: let maxSubLen = 0
+    //define left window: let left = 0
+    //define hash map for t string: let tMap = {}
+    //loop through and fill in hash map for tMap: for (let char of t)
+        // tMap[char] = (tMap[char] || 0) + 1
+    //loop through s string: for (let right = 0; right < m; right ++)
+        // if (tMap[right])
+
 # Given Solution
 
 # Thoughts
