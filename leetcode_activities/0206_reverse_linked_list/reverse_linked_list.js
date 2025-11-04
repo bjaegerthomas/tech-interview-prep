@@ -1,5 +1,5 @@
 //define function which accepts an array with the head defined of a singly linked list: function Reverse(arr)
-function Reverse(arr) {
+function Reverse(head) {
     //create a node class: class Node
     class Node {
         //create constructor: constructor(val)
@@ -19,7 +19,7 @@ function Reverse(arr) {
             //define the tail: this.tail = null
             this.tail = null;
             //define the length: this.length = arr.length
-            this.length = arr.length;
+            this.length = head.length;
         }
     }
     //define current node: let node = this.head
