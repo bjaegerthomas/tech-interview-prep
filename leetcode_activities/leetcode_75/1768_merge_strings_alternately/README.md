@@ -71,6 +71,21 @@ var mergeAlternately = function(word1, word2) {
     return merged.join("");    
 };
 
+Cleaned up version of the same:
+
+function mergeAlternately(word1, word2) {
+  let merged = [];
+
+  const maxLen = Math.max(word1.length, word2.length);
+
+  for (let i = 0; i < maxLen; i++) {
+    merged.push(word1[i] ?? "");
+    merged.push(word2[i] ?? "");
+  }
+
+  return merged.join("");
+}
+
 # Thoughts
 
 I was trying to avoid using an array but i totally understand and could have come up with the given solution. It makes sense and is cleaner than my nested conditional statements which also broke during implementation
