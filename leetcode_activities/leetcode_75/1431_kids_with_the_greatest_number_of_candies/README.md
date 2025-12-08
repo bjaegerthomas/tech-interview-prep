@@ -52,4 +52,22 @@ n == candies.length
     
 # Given Solution
 
+var kidsWithCandies = function(candies, extraCandies) {
+  const maxCandies = Math.max(...candies);
+  
+  const result = [];
+  
+  for (let i = 0; i < candies.length; i++) {
+    if (candies[i] + extraCandies >= maxCandies) {
+      result.push(true);
+    } else {
+      result.push(false);
+    }
+  }
+  
+  return result;
+};
+
 # Thoughts
+
+Nice to solve one and get a similar answer to the solution. Also did it with minimal questions about syntax. Hoping this gets burned into my brain more as i go.
