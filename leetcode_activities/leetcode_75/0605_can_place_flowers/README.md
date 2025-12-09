@@ -28,4 +28,50 @@ Output: false
       
 # Given Solution
 
+ChatGPT correct version of my code:
+
+function canPlaceFlowers(flowerbed, n) {
+    for (let i = 0; i < flowerbed.length; i++) {
+
+        // If we placed all flowers needed, return true
+        if (n === 0) return true;
+
+        // Check if current spot is empty (0)
+        if (flowerbed[i] === 0) {
+
+            // Check left side (treat out-of-bounds as empty)
+            let leftEmpty = (i === 0) || (flowerbed[i - 1] === 0);
+
+            // Check right side (treat out-of-bounds as empty)
+            let rightEmpty = (i === flowerbed.length - 1) || (flowerbed[i + 1] === 0);
+
+            // If both neighbors are empty, we can plant a flower
+            if (leftEmpty && rightEmpty) {
+                flowerbed[i] = 1;  // place flower
+                n--;               // reduce remaining flowers
+            }
+        }
+    }
+
+    // After loop, check if all flowers were placed
+    return n === 0;
+}
+
+Given Solution on Leetcode:
+
+var canPlaceFlowers = function(flowerbed, n) {
+    for (let i = 0; i < flowerbed.length; i++) {
+        const left = i === 0 || flowerbed[i - 1] === 0;
+        const right = i === flowerbed.length - 1 || flowerbed[i + 1] === 0;
+        
+        if (left && right && flowerbed[i] === 0) {
+            flowerbed[i] = 1;
+            n--;
+        }
+    }
+    return n <= 0;   
+};
+
 # Thoughts
+
+I like the second version because it takes the same thought process and makes it a cleaner code base with less lines. It also combines to the two conditional checks in the GPT generated version and combines them with the left and right check. It also makes them a constant based on the current value at i.
