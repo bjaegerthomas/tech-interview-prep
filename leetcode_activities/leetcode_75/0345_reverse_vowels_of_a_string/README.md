@@ -43,4 +43,85 @@ s consist of printable ASCII characters.
 
 # Given Solution
 
+ChatGPT fix of my logic and syntax mistakes:
+
+function reverseVowels(s) {
+    const vowels = new Set(["A","a","E","e","I","i","O","o","U","u"]);
+    
+    // Step 1: collect vowels
+    let vowelList = [];
+    for (let char of s) {
+        if (vowels.has(char)) {
+            vowelList.push(char);
+        }
+    }
+    
+    // Step 2: reverse the vowel list
+    vowelList.reverse();
+    
+    // Step 3: rebuild string, replacing vowels from reversed list
+    let result = "";
+    let index = 0;  // pointer for reversed vowels
+    
+    for (let char of s) {
+        if (vowels.has(char)) {
+            result += vowelList[index];
+            index++;
+        } else {
+            result += char;
+        }
+    }
+    
+    return result;
+}
+
+Here's the optimized Two Pointer approach that GPT then gave me:
+
+function reverseVowels(s) {
+    const vowels = new Set(["A","E","I","O","U","a","e","i","o","u"]);
+    const chars = s.split("");            // turn string into array so we can swap
+    let left = 0;
+    let right = chars.length - 1;
+
+    while (left < right) {
+        // move left pointer forward until it hits a vowel
+        while (left < right && !vowels.has(chars[left])) {
+            left++;
+        }
+
+        // move right pointer backward until it hits a vowel
+        while (left < right && !vowels.has(chars[right])) {
+            right--;
+        }
+
+        // now both chars[left] and chars[right] are vowels → swap them
+        [chars[left], chars[right]] = [chars[right], chars[left]];
+
+        left++;
+        right--;
+    }
+
+    return chars.join("");
+}
+
+And the version given by a user in Leetcode:
+
+function reverseVowels(s) {
+    const vowels = new Set(['a','e','i','o','u','A','E','I','O','U']);
+    const arr = s.split('');
+    let left = 0, right = arr.length - 1;
+
+    while (left < right) {
+        while (left < right && !vowels.has(arr[left])) left++;
+        while (left < right && !vowels.has(arr[right])) right--;
+        [arr[left], arr[right]] = [arr[right], arr[left]];
+        left++;
+        right--;
+    }
+
+    return arr.join('');
+}
+
 # Thoughts
+
+I get my mistakes now and I see the solution clearly.
