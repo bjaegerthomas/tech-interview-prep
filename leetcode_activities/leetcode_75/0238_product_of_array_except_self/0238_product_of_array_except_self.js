@@ -30,6 +30,9 @@ function productOfArrExceptSelf (nums) {
         }
         //push currProd to result array: result.push(currProd)
         result.push(currProd);
+        //reset currProd: currProd = 1
+        currProd = 1;
+
     }
     //return the result: return result
     return result;

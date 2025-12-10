@@ -41,6 +41,7 @@ ATTEMPT #2 with the correct problem parameters but obviously not in O(n) time:
         //loop through nums array: for (let k = 0; k < nums.length; k++)
             //check to see you aren't using the current i value of the nums array to tabulate your product: if (k !== i) currTotal *= nums[k]
         //push currTotal to result array: result.push(currTotal)
+        //reset currProd: currProd = 1
     //return the result: return result
 
    
