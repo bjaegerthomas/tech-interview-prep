@@ -35,3 +35,5 @@ The input is generated such that answer[i] is guaranteed to fit in a 32-bit inte
 # Given Solution
 
 # Thoughts
+
+Once again I did not read the problem carefully enough. I was trying to solve for addition when it wanted to multiply.
