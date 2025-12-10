@@ -47,6 +47,26 @@ ATTEMPT #2 with the correct problem parameters but obviously not in O(n) time:
    
 # Given Solution
 
+var productExceptSelf = function(nums) {
+    const output = Array(nums.length).fill(1);
+
+    let left = 1;
+    for (let i = 0; i < nums.length; i++) {
+        output[i] *= left;
+        left *= nums[i];
+    }
+
+    let right = 1;
+    for (let i = nums.length - 1; i >= 0; i--) {
+        output[i] *= right;
+        right *= nums[i];
+    }
+
+    return output;    
+};
+
 # Thoughts
 
 Once again I did not read the problem carefully enough. I was trying to solve for addition when it wanted to multiply.
+
+*UPDATE* Now after the given solution I can see somewhat how it is coming up with the answer but this seems like some discreet math conecpt that I would not have come up with on my own.
