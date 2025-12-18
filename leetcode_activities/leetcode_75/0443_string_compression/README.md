@@ -16,8 +16,6 @@ You must write an algorithm that uses only constant extra space.
 
 Note: The characters in the array beyond the returned length do not matter and should be ignored.
 
- 
-
 Example 1:
 
 Input: chars = ["a","a","b","b","c","c","c"]
@@ -42,7 +40,50 @@ chars[i] is a lowercase English letter, uppercase English letter, digit, or symb
 
 # Approach
 
+//define a function which accepts a string array chars: function stringCompression (chars)
+    //define an empty array s: let s = []
+    //define a counter: let count = 0
+    //loop through the array chars: for (let i = 0; i < chars.length; i++)
+        //check if count has accumulated: if (count == 0)
+            //if count = 0 then add current char of chars to s array: s.push(chars[i])
+
 # Given Solution
 
+function compress(chars) {
+  let read = 0; // Pointer to read characters
+  let write = 0; // Pointer to write compressed characters
+
+  while (read < chars.length) { 
+    let char = chars[read]; //store the char were working on
+    let count = 0;
+
+    // Count repeating chars in this set
+    while ( read < chars.length &&  //were not at the end
+            chars[read] === char) { //there is a match
+      read++;
+      count++;
+    }
+
+    // Write the character
+    chars[write++] = char;
+
+    // If count > 1, write the count digits
+    // we use digits to correctly inc our write pointer for multi digit nums
+    if (count > 1) {
+      const countStr = count.toString();
+      for (let digit of countStr) {
+        chars[write++] = digit;
+      }
+    }
+  }
+
+  // Sneakily trim to our new length by setting length directly
+  chars.length = write;
+
+  return write;
+}
+
 # Thoughts
+
+I don't think i'm smart enough for this
 
