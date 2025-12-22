@@ -24,6 +24,12 @@ Constraints:
 
 # Approach
 
+//define function which accepts an array of integers nums: function moveZeroes (nums)
+    //define counter idx: let idx = 1
+    //loop through nums array: for (let i = 0; i < nums.length; i++)
+        //check if current num is a zero: if (nums[i] === 0)
+            //if current num is a 0 
+
 # Given Solution
 
 # Thoughts
