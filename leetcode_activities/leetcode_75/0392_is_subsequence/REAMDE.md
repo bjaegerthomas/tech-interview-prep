@@ -34,8 +34,23 @@ s and t consist only of lowercase English letters.
     //otherwise return false: return false
 
 # Given Solution
+var isSubsequence = function(s, t) {
+    let sp = 0;
+    let tp = 0;
+
+    while (sp < s.length && tp < t.length) {
+        if (s[sp] === t[tp]) {
+            sp++;
+        }
+        tp++;
+    }
+
+    return sp === s.length;    
+};
 
 # Thoughts
+
+At first I wasn't keen on the given solutions variable names but now I can see that it might be a better fit than mine, since each string has it's own pointer, rather than a more vaugue right and left... I also like the cleaner use of the while loop and it's parameters as well as the return line of code which condense my if conditional statement check.
 
 
 
