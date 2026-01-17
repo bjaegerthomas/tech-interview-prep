@@ -46,7 +46,27 @@ n == height.length
 
 # Given Solution
 
+var maxArea = function(height) {
+    let maxArea = 0;
+    let left = 0;
+    let right = height.length - 1;
+
+    while (left < right) {
+        maxArea = Math.max(maxArea, (right - left) * Math.min(height[left], height[right]));
+
+        if (height[left] < height[right]) {
+            left++;
+        } else {
+            right--;
+        }
+    }
+
+    return maxArea;    
+};
+
 # Thoughts
+
+Their solution eliminates the need for some of my variable naming and establishment by combining it all into the one line of code which determines the maxArea... mine might be more readable but this version is more concise.
 
 
 
