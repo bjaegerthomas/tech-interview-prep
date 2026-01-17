@@ -9,7 +9,7 @@ function containerWithMostWater (height) {
     //define current area: let currA = 0
     let currA = 0;
     //loop through array: while (left < right)
-    while (left < right) {
+    while (lp < rp) {
         //determine width of current container: let width = Math.abs(lp - rp)
         let width = Math.abs(lp - rp);
         //determin the height of the current container: let height = Math.min(lp, rp)

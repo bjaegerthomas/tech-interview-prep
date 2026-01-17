@@ -33,7 +33,7 @@ n == height.length
     //define right pointer: let rp = height.length - 1
     //define maximum area: let maxA = 0
     //define current area: let currA = 0
-    //loop through array: while (left < right)
+    //loop through array: while (lp < rp)
         //determine width of current container: let width = Math.abs(lp - rp)
         //determin the height of the current container: let height = Math.min(lp, rp)
         //determine current area: currA = width * height
