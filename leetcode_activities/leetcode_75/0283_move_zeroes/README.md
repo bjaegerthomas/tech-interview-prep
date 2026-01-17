@@ -25,11 +25,17 @@ Constraints:
 # Approach
 
 //define function which accepts an array of integers nums: function moveZeroes (nums)
-    //define counter idx: let idx = 1
-    //loop through nums array: for (let i = 0; i < nums.length; i++)
-        //check if current num is a zero: if (nums[i] === 0)
-            //if current num is a 0 switch places with the next value in array: nums[i] = nums [i+1]
-            //then we also need to make the next value in the array a zero: nums[i+1] = 0
+    //define different pointers for two pointer approach, left pointer: let left = 0
+    //define right pointer: let right = 0
+    //define temporary value for switching: let temp = 0
+    //loop through all values in array as long as the right pointer doesn't exceed the total array values: while (right < nums.length)
+        //check if the current value is equal to 0: if (nums[right] !== 0)
+            //if the current value is not a 0 then we need to swap the right and left values, temporarily store left value: temp = nums[left]
+            //swap left with right value: nums[left] = nums[right]
+            //replace right value with former left value: nums[right] = temp
+            //increment the left pointer: left++
+        //increment the right pointer: right++
+    //return the arrray: return nums
 
 # Given Solution
 
