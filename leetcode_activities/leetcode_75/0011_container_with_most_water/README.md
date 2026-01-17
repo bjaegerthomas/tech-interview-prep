@@ -34,11 +34,11 @@ n == height.length
     //define maximum area: let maxA = 0
     //define current area: let currA = 0
     //loop through array: while (lp < rp)
-        //determine width of current container: let width = Math.abs(lp - rp)
-        //determin the height of the current container: let height = Math.min(lp, rp)
+        //determine width of current container: let w = rp - lp
+        //determin the height of the current container: let h = Math.min(height[lp], height[rp])
         //determine current area: currA = width * height
         //check which area is larger: maxA = Math.max(maxA, currA)
-        //check which height is bigger so you can increment or decrment pointers accordingly: if (lp > rp)
+        //check which height is bigger so you can increment or decrment pointers accordingly: if (height[lp] > height[rp])
             //if this is true we keep the lp pointer the same and decrement rp: rp--
         //otherwise we increment lp: else lp++
     //return the maximum area: return maxA
