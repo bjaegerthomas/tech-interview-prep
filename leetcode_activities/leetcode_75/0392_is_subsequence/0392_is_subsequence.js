@@ -10,7 +10,7 @@ function isSubsequence (s,t) {
     }
     //check to see if the left pointer made it all the way through the string: if (left == s.length - 1)
         //if it's true return true: return true
-    if (left == s.length - 1) return true;
+    if (left == s.length) return true;
     //otherwise return false: return false
     return false;
 }
