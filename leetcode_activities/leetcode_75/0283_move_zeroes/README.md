@@ -28,7 +28,8 @@ Constraints:
     //define counter idx: let idx = 1
     //loop through nums array: for (let i = 0; i < nums.length; i++)
         //check if current num is a zero: if (nums[i] === 0)
-            //if current num is a 0 
+            //if current num is a 0 switch places with the next value in array: nums[i] = nums [i+1]
+            //then we also need to make the next value in the array a zero: nums[i+1] = 0
 
 # Given Solution
 
