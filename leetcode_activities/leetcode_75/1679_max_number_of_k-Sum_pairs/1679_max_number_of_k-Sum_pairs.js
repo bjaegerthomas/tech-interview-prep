@@ -7,7 +7,7 @@ function maxOperations (nums, k) {
     //define operations counter: maxOp = 0
     maxOp = 0;
     //loop through array: while (lp < rp)
-    while (lp < rp) {
+    while (lp < rp || nums.length !== 0) {
         //check if current values add up to k: if (nums[lp] + nums[rp] == k)
         if (nums[lp] + nums[rp] == k) {
             //if true increase operations counter: maxOp++

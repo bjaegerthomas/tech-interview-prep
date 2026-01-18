@@ -35,7 +35,7 @@ Constraints:
     //define left pointer: let lp = 0
     //define right pointer: let rp = nums.length - 1
     //define operations counter: maxOp = 0
-    //loop through array: while (lp < rp)
+    //loop through array: while (lp < rp || nums.length !== 0)
         //check if current values add up to k: if (nums[lp] + nums[rp] == k)
             //if true increase operations counter: maxOp++
             //remove value at index lp from array: nums.slice(lp,1)
