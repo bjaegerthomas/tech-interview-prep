@@ -45,5 +45,29 @@ Constraints:
     //return the maximum number o operations: return maxOp
 
 # Given Solution
+function maxOperations(nums, k) {
+  nums.sort((a, b) => a - b);
+
+  let lp = 0;
+  let rp = nums.length - 1;
+  let maxOp = 0;
+
+  while (lp < rp) {
+    const sum = nums[lp] + nums[rp];
+
+    if (sum === k) {
+      maxOp++;
+      lp++;
+      rp--;
+    } else if (sum < k) {
+      lp++;
+    } else {
+      rp--;
+    }
+  }
+
+  return maxOp;
+}
 
 # Thoughts
+I can see where I went wrong now. I think in the wording I was seeing how they were saying once you have a pair that add up to the k value you can "remove them from the array" but it was essentially saying they are no longer needed to be considered for future computations, not that i necessarily need to alter the array by splicing. In addition I was also using slice instead of splice... Additionally there are time where I would need to move the left instead of the right pointer annnnnnd I also need to sort the numbers for the two pointer approach to be effective....
